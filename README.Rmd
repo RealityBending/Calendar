@@ -1,0 +1,61 @@
+---
+output: 
+  github_document:
+    toc: false
+    fig_width: 10.08
+    fig_height: 6
+tags: [r, reports]
+vignette: >
+  \usepackage[utf8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+# Calendar
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  dpi = 600,
+  collapse = TRUE,
+  fig.path = "man/figures/"
+)
+options(knitr.kable.NA = '',
+        digits = 4,
+        width=60)
+```
+
+```{r, echo = FALSE}
+library(insol)
+
+get_dates <- function(year=2013){
+  dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
+  days <- insol::JD(dates)
+  data <- insol::declination(days)
+
+  # Solstice
+  solstice_winter <- as.Date(dates[which(data==min(data))])
+  solstice_summer <- as.Date(dates[which(data==max(data))])
+
+  # Equinox
+  equinox_spring = uniroot(insol::declination, days[c(1,180)])$root
+  equinox_spring = as.Date(dates[insol::daydoy(insol::JD(equinox_spring, inv=TRUE))])
+
+  equinox_autumn = uniroot(insol::declination, days[c(180,360)])$root
+  equinox_autumn = as.Date(dates[insol::daydoy(JD(equinox_autumn,inv=TRUE))])
+
+  list("Solstice_Summer"=solstice_summer, "Solstice_Winter"=solstice_winter,
+       "Equinox_Autumn"=equinox_autumn, "Equinox_Spring"=equinox_spring)
+}
+
+
+
+today <- Sys.Date()
+dates <- get_dates(year=format(today, "%Y"))
+
+today - c(dates$Solstice_Summer,
+          dates$Solstice_Winter,
+          dates$Equinox_Autumn,
+          dates$Equinox_Spring)
+```
+
