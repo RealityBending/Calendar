@@ -23,11 +23,13 @@ knitr::opts_chunk$set(
 options(knitr.kable.NA = '',
         digits = 4,
         width=60)
+
+
+# Dependencies
+library(insol)
 ```
 
 ```{r, echo = FALSE}
-library(insol)
-
 get_dates <- function(year=2013){
   dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
   days <- insol::JD(dates)
