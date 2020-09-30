@@ -1,7 +1,7 @@
 
 # Calendar
 
-\[1\] “The next celebration is **Harvestday** in 31 days.”
+    ## [1] "The next celebration is [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday) in 31 days."
 
 ## Celebrations
 
@@ -10,5 +10,37 @@
 Description.
 
 ### Thanksday
+
+Description.
+
+### Moonfest
+
+Description.
+
+### Harvestday
+
+Description.
+
+### Deadsnight
+
+Description.
+
+### Risefest
+
+Description.
+
+### Preparationday
+
+Description.
+
+### Sunfest
+
+Description.
+
+### Loversnight
+
+Description.
+
+### Lifesday
 
 Description.
