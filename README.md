@@ -1,7 +1,9 @@
 
 # Calendar
 
-    ## [1] "The next celebration is [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday) in 31 days."
+\[1\] “The next celebration is
+[**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
+in 31 days.”
 
 ## Celebrations
 
