@@ -29,8 +29,9 @@ options(knitr.kable.NA = '',
 library(insol)
 ```
 
-```{r, echo = FALSE}
-get_dates <- function(year=2013){
+```{r astromical_events, echo = FALSE}
+# Define convenience function (needs to 'insol' package)
+get_dates_atronomical <- function(year=2013){
   dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
   days <- insol::JD(dates)
   data <- insol::declination(days)
@@ -46,18 +47,61 @@ get_dates <- function(year=2013){
   equinox_autumn = uniroot(insol::declination, days[c(180,360)])$root
   equinox_autumn = as.Date(dates[insol::daydoy(JD(equinox_autumn,inv=TRUE))])
 
-  list("Solstice_Summer"=solstice_summer, "Solstice_Winter"=solstice_winter,
-       "Equinox_Autumn"=equinox_autumn, "Equinox_Spring"=equinox_spring)
+  list("Solstice_Summer"=solstice_summer, 
+       "Solstice_Winter"=solstice_winter,
+       "Equinox_Autumn"=equinox_autumn, 
+       "Equinox_Spring"=equinox_spring)
 }
-
-
-
-today <- Sys.Date()
-dates <- get_dates(year=format(today, "%Y"))
-
-today - c(dates$Solstice_Summer,
-          dates$Solstice_Winter,
-          dates$Equinox_Autumn,
-          dates$Equinox_Spring)
 ```
 
+```{r dates_celebrations, echo = FALSE}
+get_dates_celebrations <- function(year=2020){
+  astro <- get_dates_atronomical(year=year)
+  
+  # Rise and Fall
+  # TODO
+  
+  # Dark nights/Bright days
+  # TODO
+  
+  # Celebrations
+  c("Fallfest"=astro$Solstice_Summer,
+     "Thanksday"=as.Date(paste0(year, "-08-01")),
+     "Moonfest"=astro$Equinox_Autumn,
+     "Harvestday"=as.Date(paste0(year, "-10-31")),
+     "Deadsnight"=as.Date(paste0(year, "-11-01")),
+     "Risefest"=astro$Solstice_Winter,
+     "Preparationday"=as.Date(paste0(year, "-02-01")),
+     "Sunfest"=astro$Equinox_Spring,
+     "Loversnight"=as.Date(paste0(year, "-04-30")),
+     "Lifesday"=as.Date(paste0(year, "-05-01")))
+}
+```
+
+
+```{r dates_celebrations, echo = FALSE, results='asis'}
+today <- Sys.Date()
+year <- as.numeric(format(today, "%Y"))
+
+dates <- as.Date(c())
+for(y in c(year, year + 1)){
+  dates <- c(dates, get_dates_celebrations(as.character(y)))
+  d <- today - dates
+  dates <- dates[d <= 0]
+}
+
+d <- today - dates
+next_date <- which.max(d)
+
+print(paste0("The next celebration is **", names(next_date), "** in ", abs(as.numeric(d[next_date])), " days."))
+```
+
+## Celebrations
+
+### Fallfest
+
+Description.
+
+### Thanksday
+
+Description.
