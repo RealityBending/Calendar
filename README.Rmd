@@ -93,7 +93,7 @@ for(y in c(year, year + 1)){
 d <- today - dates
 next_date <- which.max(d)
 
-print(paste0("The next celebration is [**", names(next_date), "**](https://github.com/RealityBending/Calendar#", names(next_date), ") in ", abs(as.numeric(d[next_date])), " days."))
+print(paste0("The next celebration is [**", names(next_date), "**](https://github.com/RealityBending/Calendar#", names(next_date), ") in **", abs(as.numeric(d[next_date])), "** days."))
 ```
 
 ## Celebrations
