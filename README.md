@@ -1,5 +1,14 @@
 
 # Calendar
 
-    ## Time differences in days
-    ## [1] 102 -82   8 194
+\[1\] “The next celebration is **Harvestday** in 31 days.”
+
+## Celebrations
+
+### Fallfest
+
+Description.
+
+### Thanksday
+
+Description.
