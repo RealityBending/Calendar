@@ -79,7 +79,7 @@ get_dates_celebrations <- function(year=2020){
 ```
 
 
-```{r find_closest, echo = FALSE, results='markup'}
+```{r find_closest, echo = FALSE, results='asis'}
 today <- Sys.Date()
 year <- as.numeric(format(today, "%Y"))
 
