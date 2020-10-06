@@ -2,9 +2,7 @@
 # Calendar
 
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
-time of the **Fall**.
-
-The next celebration is
+time of the **Fall**. The next celebration is
 [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
 in **25** days.
 
@@ -16,12 +14,14 @@ None yet.
 
 ![](calendar_plot-1.png)<!-- -->
 
-The year is divided in two main overlapping cycles, the **Rise/Fall**
-phase (December - June) and the **Dark nights/Bright days** period
-(September - March).
+In the Reality Bending group, we follow the calendar of the
+phosphoranists. The year is divided in two main overlapping cycles, the
+**Rise/Fall** phase (December - June) and the **Dark nights/Bright
+days** period (September - March).
 
-Note: this calendar updates automatically based on the solar and lunar
-astronomical events (solstices, equinoxes, full moons and new moons).
+*Note: this calendar is automatically updated daily, taking into account
+the exact dates of the solar and lunar astronomical events (solstices,
+equinoxes, full moons) of the current year.*
 
 ### Preparationday
 
