@@ -14,11 +14,11 @@ editor_options:
 
 # Calendar
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(
   dpi = 600,
   collapse = TRUE,
-  fig.path = "man/figures/"
+  fig.path = ""
 )
 options(knitr.kable.NA = '',
         digits = 4,
@@ -27,11 +27,12 @@ options(knitr.kable.NA = '',
 
 # Dependencies
 library(insol)
+library(lunar)
 ```
 
 ```{r astromical_events, echo = FALSE}
-# Define convenience function (needs to 'insol' package)
-get_dates_atronomical <- function(year=2013){
+# Define convenience function (needs to 'insol' and the 'lunar' package) to find dates of solstices, equinoxes, full moons and new moons for a given year.
+get_dates_atronomical <- function(year=2020){
   dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
   days <- insol::JD(dates)
   data <- insol::declination(days)
@@ -46,95 +47,244 @@ get_dates_atronomical <- function(year=2013){
 
   equinox_autumn = uniroot(insol::declination, days[c(180,360)])$root
   equinox_autumn = as.Date(dates[insol::daydoy(JD(equinox_autumn,inv=TRUE))])
-
+  
+  # Full moons
+  phase <- lunar::lunar.illumination(dates)
+  moon <- data.frame(dates = as.Date(dates), 
+                     phase = phase,
+                     newmoon = FALSE,
+                     fullmoon = FALSE)
+  moon[which(diff(sign(diff(phase)))==-2)+1, "fullmoon"] <- TRUE 
+  moon[which(diff(sign(diff(phase)))==2)+2, "newmoon"] <- TRUE 
+  
   list("Solstice_Summer"=solstice_summer, 
        "Solstice_Winter"=solstice_winter,
        "Equinox_Autumn"=equinox_autumn, 
-       "Equinox_Spring"=equinox_spring)
+       "Equinox_Spring"=equinox_spring,
+       "Moon_Full"=moon[moon$fullmoon==TRUE, "dates"],
+       "Moon_New"=moon[moon$newmoon==TRUE, "dates"],
+       "Dates"=dates)
 }
 ```
 
 ```{r dates_celebrations, echo = FALSE}
 get_dates_celebrations <- function(year=2020){
+  
+  # Convenience function to find the midpoint between two dates
+  midpoint <- function(date1, date2){
+    days <- seq(date1, date2, by="days")
+    days[round(length(days) / 2)]
+  }
+  
+  # Get dates
+  astro_prev <- get_dates_atronomical(year=year-1)
   astro <- get_dates_atronomical(year=year)
+  astro_next <- get_dates_atronomical(year=year+1)
+
+  # Solar
+  out <- c(
+    "Darkrise"=midpoint(astro_prev$Solstice_Winter, astro$Equinox_Spring),
+    "Sunfest"=astro$Equinox_Spring,
+    "Brightrise"=midpoint(astro$Equinox_Spring, astro$Solstice_Summer),
+    "Fallfest"=astro$Solstice_Summer,
+    "Brightfall"=midpoint(astro$Solstice_Summer, astro$Equinox_Autumn),
+    "Moonfest"=astro$Equinox_Autumn,
+    "Darkfall"=midpoint(astro$Equinox_Autumn, astro$Solstice_Winter),
+    "Risefest"=astro$Solstice_Winter
+    )
   
-  # Rise and Fall
-  # TODO
+  # Lunar
+  fullmoon_darkfall <- astro$Moon_Full[which.min(abs(out["Darkfall"]-astro$Moon_Full))]
+  fullmoon_darkrise <- astro$Moon_Full[which.min(abs(out["Darkrise"]-astro$Moon_Full))]
   
-  # Dark nights/Bright days
-  # TODO
+  c(
+    out,
+    "Thanksday"=astro$Moon_Full[which.min(abs(out["Brightfall"]-astro$Moon_Full))],
+    "Harvestday"=fullmoon_darkfall,
+    "Deadsnight"=fullmoon_darkfall,
+    "Preparationday"=fullmoon_darkrise,
+    "Loversnight"=astro$Moon_Full[which.min(abs(out["Brightrise"]-astro$Moon_Full))],
+    "Lifesday"=astro$Moon_Full[which.min(abs(out["Brightrise"]-astro$Moon_Full))]
+    )
+  
+}
+```
+
+```{r find_closest, echo = FALSE}
+get_dates <- function(){
+  today <- Sys.Date()
+  year <- as.numeric(format(today, "%Y"))
+  
+  dates <- as.Date(c())
+  for(y in c(year, year + 1)){
+    dates <- c(dates, get_dates_celebrations(y))
+    d <- today - dates
+    dates <- dates[d <= 0]
+  }
+  
+  d <- today - dates
+  next_date <- which.max(d)
+  celeb <- names(next_date)
+  
+  if (celeb %in% c("Thanksday", "Moonfest")){
+    season <- "Summer"
+    period <- "Bright Days"
+    phase <- "Fall"
+  } else if (celeb %in% c("Harvestday", "Deadsnight")){
+    season <- "Autumn"
+    period <- "Dark Nights"
+    phase <- "Fall"
+  } else if (celeb %in% c("Risefest")){
+    season <- "Winter"
+    period <- "Dark Nights"
+    phase <- "Fall"
+  } else if (celeb %in% c("Preparationday", "Sunfest")){
+    season <- "Winter"
+    period <- "Dark Nights"
+    phase <- "Rise"
+  } else if (celeb %in% c("Loversnight", "Lifesday")){
+    season <- "Spring"
+    period <- "Bright Days"
+    phase <- "Rise"
+  } else if (celeb %in% c("Fallfest")){
+    season <- "Summer"
+    period <- "Bright Days"
+    phase <- "Rise"
+  } else{
+    season <- "FAILURE"
+    period <- "FAILURE"
+    phase <- "FAILURE"
+  }
   
   # Celebrations
-  c("Fallfest"=astro$Solstice_Summer,
-    "Thanksday"=as.Date(paste0(year, "-08-01")),
-    "Moonfest"=astro$Equinox_Autumn,
-    "Harvestday"=as.Date(paste0(year, "-10-31")),
-    "Deadsnight"=as.Date(paste0(year, "-11-01")),
-    "Risefest"=astro$Solstice_Winter,
-    "Preparationday"=as.Date(paste0(year, "-02-01")),
-    "Sunfest"=astro$Equinox_Spring,
-    "Loversnight"=as.Date(paste0(year, "-04-30")),
-    "Lifesday"=as.Date(paste0(year, "-05-01")))
+  list("N_Days" = abs(as.numeric(d[next_date])),
+       "Next_Celebration" = celeb,
+       "Season" = season,
+       "Period" = period,
+       "Phase" = phase)
 }
 ```
 
 
-```{r find_closest, echo = FALSE, results='asis'}
-today <- Sys.Date()
-year <- as.numeric(format(today, "%Y"))
+```{r print, echo = FALSE, results='asis', message=FALSE, warning=FALSE}
+info <- get_dates()
 
-dates <- as.Date(c())
-for(y in c(year, year + 1)){
-  dates <- c(dates, get_dates_celebrations(as.character(y)))
-  d <- today - dates
-  dates <- dates[d <= 0]
-}
-
-d <- today - dates
-next_date <- which.max(d)
-
-print(paste0("The next celebration is [**", names(next_date), "**](https://github.com/RealityBending/Calendar#", names(next_date), ") in **", abs(as.numeric(d[next_date])), "** days."))
+cat(paste0("We are in **",
+           info$Season,
+           "**. The **",
+           info$Period,
+           "** are upon us, and we are in the time of the **",
+           info$Phase,
+           "**.\n\n",
+           "The next celebration is [**", 
+           info$Next_Celebration, 
+           "**](https://github.com/RealityBending/Calendar#", 
+           info$Next_Celebration, 
+           ") in **", 
+           info$N_Days, 
+           "** days."))
 ```
+
+
+## Important dates
+
+None yet.
 
 ## Celebrations
 
-### Fallfest
 
-Description.
+```{r calendar_plot, echo=FALSE, message=FALSE, warning=FALSE, dpi=450}
+library(ggplot2)
 
-### Thanksday
+year <- as.numeric(format(Sys.Date(), "%Y"))
+days <- as.Date(seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day'))
+celebrations <- get_dates_celebrations(year)
 
-Description.
+# Create data
+data <- data.frame(Day = days,
+                   Celebration = NA,
+                   Main = NA,
+                   Type = ifelse(days %in% celebrations[c("Sunfest", "Moonfest", "Risefest", "Fallfest",
+                                                           "Darkrise", "Brightrise", "Darkfall", "Brightfall")], "Solar", "Lunar"))
 
-### Moonfest
+for(i in 1:length(celebrations)) {
+  if(is.na(data[data$Day == celebrations[i], "Celebration"])){
+    data[data$Day == celebrations[i], "Celebration"] <- names(celebrations[i])
+  } else{
+    data[data$Day == celebrations[i], "Celebration"] <- paste(data[data$Day == celebrations[i], "Celebration"], "/", names(celebrations[i]))
+  }
+}
 
-Description.
+data$Bar <- ifelse(is.na(data$Celebration), 0, 1)
+data$Main <- ifelse(data$Day %in% celebrations[c("Sunfest", "Moonfest", "Risefest", "Fallfest",
+                                                 "Harvestday", "Preparationday", "Thanksday", "Loversnight")], 2, ifelse(is.na(data$Celebration), NA, 0.5))
 
-### Harvestday
 
-Description.
+ggplot(data, aes(x = Day, y=Bar)) +
+  geom_bar(aes(fill=Type), width=data$Main, stat = "identity", position="identity") +
+  geom_bar(data=data.frame(Day = Sys.Date(), Bar=0.8), fill="black", width=3, stat = "identity", position="identity") +
+  geom_text(aes(label=Celebration), y=1.1, size = 3, angle = 0, fontface="italic") +
+  coord_polar(start=0) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major =  element_line(colour = "#B0BEC5")) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1), breaks = NULL) +
+  guides(fill=FALSE) +
+  scale_x_date(date_breaks = "1 month", date_labels = month.abb, limits = range(c(days[1], days[-1]))) +
+  scale_fill_manual(values=c("Lunar"="#2196F3", "Solar"= "#f44336"))
+```
 
-### Deadsnight
 
-Description.
 
-### Risefest
+The year is divided in two main overlapping cycles, the **Rise/Fall** phase (December - June) and the **Dark nights/Bright days** period (September - March). 
 
-Description.
+Note: this calendar updates automatically based on the solar and lunar astronomical events (solstices, equinoxes, full moons and new moons).
+
 
 ### Preparationday
 
-Description.
+**Fullmoon between Risefest and Sunfest** `r format(celebrations["Preparationday"], "*(%Y %B %d - %A)*")`. Team building and planning of the work roadmap for the year.
 
 ### Sunfest
 
-Description.
+**Spring equinox** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`: Eating eggs and water pranks. Coming of **Bright days** and **Spring**.
 
 ### Loversnight
 
-Description.
+**Fullmoon between Sunfest and Fallfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`: Celebration of partners and loved ones.
 
 ### Lifesday
 
-Description.
+**Day after Loversnight** `r format(celebrations["Loversnight"] + 1, "*(%Y %B %d - %A)*")`: Visit to parents and family. Start of **Summer**.
+
+### Fallfest
+
+**Summer solstice** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`: Crackers and fireworks at sunset. Popcorns made in fires in the night.
+
+### Thanksday
+
+**Fullmoon between Fallfest and Moonfest** `r format(celebrations["Thanksday"], "*(%Y %B %d - %A)*")`: Work superiors treat to dinner. Rewards and vacations.
+
+### Moonfest
+
+**Autumn equinox** `r format(celebrations["Moonfest"], "*(%Y %B %d - %A)*")`: Fires are lit (no electricity). Coming of the **Dark Nights** and **Autumn**.
+
+### Harvestday
+
+**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`: Physical/sport games and competitions between colleagues.
+
+### Deadsnight
+
+**Fullmoon between Moonfest and Risefest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`: Visit to cemeteries. Start of **Winter**.
+
+### Risefest
+
+**Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`: From that date until the 6th January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
+
+
 
