@@ -3,7 +3,7 @@
 
 \[1\] “The next celebration is
 [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
-in **26** days.”
+in **25** days.”
 
 ## Celebrations
 
