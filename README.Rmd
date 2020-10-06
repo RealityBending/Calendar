@@ -169,20 +169,22 @@ get_dates <- function(){
 ```{r print, echo = FALSE, results='asis', message=FALSE, warning=FALSE}
 info <- get_dates()
 
+
 cat(paste0("We are in **",
            info$Season,
            "**. The **",
            info$Period,
            "** are upon us, and we are in the time of the **",
            info$Phase,
-           "**.\n\n",
+           "**. ",
            "The next celebration is [**", 
            info$Next_Celebration, 
            "**](https://github.com/RealityBending/Calendar#", 
            info$Next_Celebration, 
            ") in **", 
            info$N_Days, 
-           "** days."))
+           "** days",
+           ifelse(info$N_Days == 10, " (@DominiqueMakowski).", ".")))
 ```
 
 
@@ -243,7 +245,7 @@ ggplot(data, aes(x = Day, y=Bar)) +
 
 The year is divided in two main overlapping cycles, the **Rise/Fall** phase (December - June) and the **Dark nights/Bright days** period (September - March). 
 
-Note: this calendar updates automatically based on the solar and lunar astronomical events (solstices, equinoxes, full moons and new moons).
+*Note: this calendar is automatically updated daily, taking into account the exact dates of the solar and lunar astronomical events (solstices, equinoxes, full moons) of the current year.*
 
 
 ### Preparationday
