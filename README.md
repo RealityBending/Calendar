@@ -4,7 +4,7 @@
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
-in **11** days.
+in **10** days (@DominiqueMakowski).
 
 ## Important dates
 
