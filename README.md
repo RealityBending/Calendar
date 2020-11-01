@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
-time of the **Fall**. The next celebration is
-[**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
-in **0** days.
+We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
+time of the **FAILURE**. The next celebration is
+[**Darkfall**](https://github.com/RealityBending/Calendar#Darkfall) in
+**5** days.
 
 ## Important dates
 
