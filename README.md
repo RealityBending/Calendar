@@ -4,7 +4,7 @@
 We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
 time of the **FAILURE**. The next celebration is
 [**Darkfall**](https://github.com/RealityBending/Calendar#Darkfall) in
-**4** days.
+**3** days.
 
 ## Important dates
 
