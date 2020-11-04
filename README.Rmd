@@ -126,11 +126,11 @@ get_dates <- function(){
   next_date <- which.max(d)
   celeb <- names(next_date)
   
-  if (celeb %in% c("Thanksday", "Moonfest")){
+  if (celeb %in% c("Thanksday", "Moonfest", "Brightfall")){
     season <- "Summer"
     period <- "Bright Days"
     phase <- "Fall"
-  } else if (celeb %in% c("Harvestday", "Deadsnight")){
+  } else if (celeb %in% c("Harvestday", "Deadsnight", "Darkfall")){
     season <- "Autumn"
     period <- "Dark Nights"
     phase <- "Fall"
@@ -138,11 +138,11 @@ get_dates <- function(){
     season <- "Winter"
     period <- "Dark Nights"
     phase <- "Fall"
-  } else if (celeb %in% c("Preparationday", "Sunfest")){
+  } else if (celeb %in% c("Preparationday", "Sunfest", "Darkrise")){
     season <- "Winter"
     period <- "Dark Nights"
     phase <- "Rise"
-  } else if (celeb %in% c("Loversnight", "Lifesday")){
+  } else if (celeb %in% c("Loversnight", "Lifesday", "Brightrise")){
     season <- "Spring"
     period <- "Bright Days"
     phase <- "Rise"
@@ -241,7 +241,7 @@ ggplot(data, aes(x = Day, y=Bar)) +
   scale_fill_manual(values=c("Lunar"="#2196F3", "Solar"= "#f44336"))
 ```
 
-In the Reality Bending group, we follow the calendar of the phosphoranists. The year is divided in two main overlapping cycles, the **Rise/Fall** phase (December - June) and the **Dark nights/Bright days** period (September - March). 
+In the Reality Bending group, we follow the calendar of the heosphorists. The year is divided in two main overlapping cycles, the **Rise/Fall** phases (December - June) and the **Dark nights/Bright days** periods (September - March). 
 
 *Note: this calendar is automatically updated daily, taking into account the exact dates of the solar and lunar astronomical events (solstices, equinoxes, full moons) of the current year.*
 
@@ -252,39 +252,39 @@ In the Reality Bending group, we follow the calendar of the phosphoranists. The 
 
 ### Sunfest
 
-**Spring equinox** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`: Eating eggs and water pranks. Coming of **Bright days** and **Spring**.
+**Spring equinox** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`. Eating eggs and water pranks. Coming of **Bright days** and **Spring**.
 
 ### Loversnight
 
-**Fullmoon between Sunfest and Fallfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`: Celebration of partners and loved ones.
+**Fullmoon between Sunfest and Fallfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`. Celebration of partners and loved ones.
 
 ### Lifesday
 
-**Day after Loversnight** `r format(celebrations["Loversnight"] + 1, "*(%Y %B %d - %A)*")`: Visit to parents and family. Start of **Summer**.
+**Day after Loversnight** `r format(celebrations["Loversnight"] + 1, "*(%Y %B %d - %A)*")`. Visit to parents and family. Start of **Summer**.
 
 ### Fallfest
 
-**Summer solstice** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`: Crackers and fireworks at sunset. Popcorns made in fires in the night.
+**Summer solstice** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`. Crackers and fireworks at sunset. Popcorns made in fires in the night.
 
 ### Thanksday
 
-**Fullmoon between Fallfest and Moonfest** `r format(celebrations["Thanksday"], "*(%Y %B %d - %A)*")`: Work superiors treat to dinner. Rewards and vacations.
+**Fullmoon between Fallfest and Moonfest** `r format(celebrations["Thanksday"], "*(%Y %B %d - %A)*")`. Work superiors treat to dinner. Rewards and vacations.
 
 ### Moonfest
 
-**Autumn equinox** `r format(celebrations["Moonfest"], "*(%Y %B %d - %A)*")`: Fires are lit (no electricity). Coming of the **Dark Nights** and **Autumn**.
+**Autumn equinox** `r format(celebrations["Moonfest"], "*(%Y %B %d - %A)*")`. Fires are lit (no electricity). Coming of the **Dark Nights** and **Autumn**.
 
 ### Harvestday
 
-**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`: Physical/sport games and competitions between colleagues.
+**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. Physical/sport games and competitions between colleagues.
 
 ### Deadsnight
 
-**Fullmoon between Moonfest and Risefest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`: Visit to cemeteries. Start of **Winter**.
+**Fullmoon between Moonfest and Risefest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit to cemeteries. Start of **Winter**.
 
 ### Risefest
 
-**Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`: From that date until the 6th January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
+**Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. From that date until the 6th January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
 
 
 
