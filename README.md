@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Preparationday**](https://github.com/RealityBending/Calendar#Preparationday)
-in **3** days.
+in **2** days.
 
 ## Important dates
 
