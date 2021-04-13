@@ -4,7 +4,7 @@
 We are in **Spring**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Loversnight**](https://github.com/RealityBending/Calendar#Loversnight)
-in **14** days.
+in **13** days.
 
 ## Important dates
 
