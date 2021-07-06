@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Thanksday**](https://github.com/RealityBending/Calendar#Thanksday) in
-**19** days.
+**18** days.
 
 ## Important dates
 
