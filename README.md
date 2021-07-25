@@ -3,8 +3,8 @@
 
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Thanksday**](https://github.com/RealityBending/Calendar#Thanksday) in
-**0** days.
+[**Brightfall**](https://github.com/RealityBending/Calendar#Brightfall)
+in **12** days.
 
 ## Important dates
 
