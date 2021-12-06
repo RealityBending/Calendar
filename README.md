@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Risefest**](https://github.com/RealityBending/Calendar#Risefest) in
-**16** days.
+**15** days.
 
 ## Important dates
 
