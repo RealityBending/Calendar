@@ -4,7 +4,7 @@
 We are in **Spring**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Brightrise**](https://github.com/RealityBending/Calendar#Brightrise)
-in **22** days.
+in **21** days.
 
 ## Important dates
 
