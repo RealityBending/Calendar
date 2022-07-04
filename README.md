@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Brightfall**](https://github.com/RealityBending/Calendar#Brightfall)
-in **35** days.
+in **34** days.
 
 ## Important dates
 
