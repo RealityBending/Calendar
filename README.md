@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Moonfest**](https://github.com/RealityBending/Calendar#Moonfest) in
-**33** days.
+**31** days.
 
 ## Important dates
 
