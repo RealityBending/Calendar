@@ -4,7 +4,7 @@
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Darkfall**](https://github.com/RealityBending/Calendar#Darkfall) in
-**33** days.
+**32** days.
 
 ## Important dates
 
