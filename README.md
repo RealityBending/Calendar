@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Darkrise**](https://github.com/RealityBending/Calendar#Darkrise) in
-**34** days.
+**33** days.
 
 ## Important dates
 
@@ -25,53 +25,51 @@ equinoxes, full moons) of the current year.*
 
 ### Preparationday
 
-**Fullmoon between Risefest and Sunfest** *(2022 February 16 -
-Wednesday)*. Team building and planning of the work roadmap for the
-year.
+**Fullmoon between Risefest and Sunfest** *(2023 February 05 - Sunday)*.
+Team building and planning of the work roadmap for the year.
 
 ### Sunfest
 
-**Spring equinox** *(2022 March 20 - Sunday)*. Eating eggs and water
+**Spring equinox** *(2023 March 20 - Monday)*. Eating eggs and water
 pranks. Coming of **Bright days** and **Spring**.
 
 ### Loversnight
 
-**Fullmoon between Sunfest and Fallfest** *(2022 May 15 - Sunday
+**Fullmoon between Sunfest and Fallfest** *(2023 May 05 - Friday
 night)*. Celebration of partners and loved ones.
 
 ### Lifesday
 
-**Day after Loversnight** *(2022 May 16 - Monday)*. Visit to parents and
-family. Start of **Summer**.
+**Day after Loversnight** *(2023 May 06 - Saturday)*. Visit to parents
+and family. Start of **Summer**.
 
 ### Fallfest
 
-**Summer solstice** *(2022 June 21 - Tuesday)*. Crackers and fireworks
+**Summer solstice** *(2023 June 21 - Wednesday)*. Crackers and fireworks
 at sunset. Popcorns made in fires in the night.
 
 ### Thanksday
 
-**Fullmoon between Fallfest and Moonfest** *(2022 August 12 - Friday)*.
+**Fullmoon between Fallfest and Moonfest** *(2023 August 01 - Tuesday)*.
 Work superiors treat to dinner. Rewards and vacations.
 
 ### Moonfest
 
-**Autumn equinox** *(2022 September 23 - Friday)*. Fires are lit (no
+**Autumn equinox** *(2023 September 23 - Saturday)*. Fires are lit (no
 electricity). Coming of the **Dark Nights** and **Autumn**.
 
 ### Harvestday
 
-**Day before the fullmoon between Moonfest and Risefest** *(2022
-November 08 - Tuesday)*. Physical/sport games and competitions between
-colleagues.
+**Day before the fullmoon between Moonfest and Risefest** *(2023 October
+29 - Sunday)*. Physical/sport games and competitions between colleagues.
 
 ### Deadsnight
 
-**Fullmoon between Moonfest and Risefest** *(2022 November 08 -
-Tuesday)*. Visit to cemeteries. Start of **Winter**.
+**Fullmoon between Moonfest and Risefest** *(2023 October 29 - Sunday)*.
+Visit to cemeteries. Start of **Winter**.
 
 ### Risefest
 
-**Winter solstice** *(2022 December 21 - Wednesday)*. From that date
-until the 6th January, people keep a tree inside of their houses. On the
-21th, it is decorated with garlands, and people drink snake wine.
+**Winter solstice** *(2023 December 22 - Friday)*. From that date until
+the 6th January, people keep a tree inside of their houses. On the 21th,
+it is decorated with garlands, and people drink snake wine.
