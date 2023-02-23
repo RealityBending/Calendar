@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Sunfest**](https://github.com/RealityBending/Calendar#Sunfest) in
-**26** days.
+**25** days.
 
 ## Important dates
 
