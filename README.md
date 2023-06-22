@@ -19,9 +19,10 @@ is divided in two main overlapping cycles, the **Rise/Fall** phases
 (December - June) and the **Dark nights/Bright days** periods
 (September - March).
 
-*Note: this calendar is automatically updated daily, taking into account
-the exact dates of the solar and lunar astronomical events (solstices,
-equinoxes, full moons) of the current year.*
+*Note: this calendar is automatically updated daily thanks to an
+automated R script that account for the exact dates of the solar and
+lunar astronomical events (solstices, equinoxes, full moons) of the
+current year.*
 
 ### Preparationday
 
