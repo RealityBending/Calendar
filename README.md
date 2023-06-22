@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **Winter**. The **Dark Nights** are upon us, and we are in the
+We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
-[**Sunfest**](https://github.com/RealityBending/Calendar#Sunfest) in
-**21** days.
+[**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
+**0** days.
 
 ## Important dates
 
@@ -45,7 +45,7 @@ and family. Start of **Summer**.
 
 ### Fallfest
 
-**Summer solstice** *(2023 June 21 - Wednesday)*. Crackers and fireworks
+**Summer solstice** *(2023 June 22 - Thursday)*. Crackers and fireworks
 at sunset. Popcorns made in fires in the night.
 
 ### Thanksday

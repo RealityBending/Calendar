@@ -26,27 +26,25 @@ options(knitr.kable.NA = '',
 
 
 # Dependencies
-library(insol)
+library(chillR)
 library(lunar)
+library(fmdates)
 ```
 
 ```{r astromical_events, echo = FALSE}
-# Define convenience function (needs to 'insol' and the 'lunar' package) to find dates of solstices, equinoxes, full moons and new moons for a given year.
-get_dates_atronomical <- function(year=2020){
+# Define convenience function (needs to 'chillR' and the 'lunar' package) to find dates of solstices, equinoxes, full moons and new moons for a given year.
+get_dates_atronomical <- function(year=2023){
   dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
-  days <- insol::JD(dates)
-  data <- insol::declination(days)
+  days <- chillR::make_JDay(data.frame(Year=format(dates, "%Y"),Month=format(dates, "%m"),Day=format(dates, "%d")))
+  daylength <- chillR::daylength(latitude = 50.8229, days$JDay)$Daylength  # Latitude in Brighton, UK
 
   # Solstice
-  solstice_winter <- as.Date(dates[which(data==min(data))])
-  solstice_summer <- as.Date(dates[which(data==max(data))])
-
+  solstice_winter <- as.Date(dates[which(daylength==min(daylength))])
+  solstice_summer <- as.Date(dates[which(daylength==max(daylength))])
+  
   # Equinox
-  equinox_spring = uniroot(insol::declination, days[c(1,180)])$root
-  equinox_spring = as.Date(dates[insol::daydoy(insol::JD(equinox_spring, inv=TRUE))])
-
-  equinox_autumn = uniroot(insol::declination, days[c(180,360)])$root
-  equinox_autumn = as.Date(dates[insol::daydoy(JD(equinox_autumn,inv=TRUE))])
+  equinox_spring <- as.Date(fmdates:::equinox(year, season = "mar", tz = "GMT"))
+  equinox_autumn <- as.Date(fmdates:::equinox(year, season = "sep", tz = "GMT"))
   
   # Full moons
   phase <- lunar::lunar.illumination(dates)
@@ -68,7 +66,7 @@ get_dates_atronomical <- function(year=2020){
 ```
 
 ```{r dates_celebrations, echo = FALSE}
-get_dates_celebrations <- function(year=2020){
+get_dates_celebrations <- function(year=2024){
   
   # Convenience function to find the midpoint between two dates
   midpoint <- function(date1, date2){
