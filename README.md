@@ -14,10 +14,10 @@ None yet.
 
 ![](calendar_plot-1.png)<!-- -->
 
-In the Reality Bending group, we follow the calendar of the
-heosphorists. The year is divided in two main overlapping cycles, the
-**Rise/Fall** phases (December - June) and the **Dark nights/Bright
-days** periods (September - March).
+In the Reality Bending Lab, we follow an astronomical calendar. The year
+is divided in two main overlapping cycles, the **Rise/Fall** phases
+(December - June) and the **Dark nights/Bright days** periods
+(September - March).
 
 *Note: this calendar is automatically updated daily, taking into account
 the exact dates of the solar and lunar astronomical events (solstices,
