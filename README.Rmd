@@ -169,7 +169,6 @@ get_dates <- function(){
 ```{r print, echo = FALSE, results='asis', message=FALSE, warning=FALSE}
 info <- get_dates()
 
-
 cat(paste0("We are in **",
            info$Season,
            "**. The **",
