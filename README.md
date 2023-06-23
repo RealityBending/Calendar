@@ -2,9 +2,9 @@
 # Calendar
 
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
-time of the **Rise**. The next celebration is
-[**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
-**0** days.
+time of the **Fall**. The next celebration is
+[**Thanksday**](https://github.com/RealityBending/Calendar#Thanksday) in
+**39** days.
 
 ## Important dates
 
