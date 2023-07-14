@@ -74,3 +74,12 @@ Visit to cemeteries. Start of **Winter**.
 **Winter solstice** *(2023 December 22 - Friday)*. From that date until
 the 6th January, people keep a tree inside of their houses. On the 21th,
 it is decorated with garlands, and people drink snake wine.
+
+### Other Celebrations
+
+*Dates TBD*
+
+- **Saturnalia** (black sun): Before Risefest (17th December?). Chaos
+  and mischief. Elect a “Lord of Misrule”. Inversed hierarchy.
+- **Festival of the Innocents**: Before Loversnight. Masked party.
+  Anonymity and roles.
