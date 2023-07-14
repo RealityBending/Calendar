@@ -181,7 +181,7 @@ cat(paste0("We are in **",
            ") in **", 
            info$N_Days, 
            "** days",
-           ifelse(info$N_Days == 10, " (@DominiqueMakowski).", ".")))
+           ifelse(info$N_Days == 14, " (@DominiqueMakowski).", ".")))
 ```
 
 
@@ -232,19 +232,23 @@ ggplot(data, aes(x = Day, y=Bar)) +
   geom_bar(aes(fill=Type), width=data$Main, stat = "identity", position="identity") +
   # geom_segment(data = segments, aes(xend = xend, y = y, yend = y), color = "#f44336", linewidth = 2) +
   geom_bar(data=data.frame(Day = Sys.Date(), Bar=0.8), fill="black", width=3, stat = "identity", position="identity") +
-  geom_text(aes(label=Celebration), y=1.1, size = 3, angle = 0, fontface="italic") +
-  coord_polar(start=0) +
-  theme_minimal() +
+  geom_text(aes(label=Celebration), y=1.25, size = 3, angle = 0, fontface="italic") +
+  coord_polar(start=0, clip = "off") +
+  theme_void() +
   theme(axis.title = element_blank(),
         axis.text.y = element_blank(),
+        axis.text.x = element_text(face= "bold"),
         axis.ticks.y = element_blank(),
+        axis.line.x = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.grid.major =  element_line(colour = "#B0BEC5")) +
+        panel.grid.major.y = element_blank(), 
+        panel.grid.major =  element_line(colour = "#FFB300")) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 1), breaks = NULL) +
   guides(fill="none") +
-  scale_x_date(date_breaks = "1 month", date_labels = month.abb, limits = range(c(days[1], days[-1]))) +
+  scale_x_date(date_breaks = "1 month", 
+               date_labels = month.abb, 
+               limits = range(c(days[1], days[-1]))) +
   scale_fill_manual(values=c("Lunar"="#2196F3", "Solar"= "#f44336"))
 ```
 
@@ -292,6 +296,13 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 ### Risefest
 
 **Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. From that date until the 6th January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
+
+### Other  Celebrations 
+
+*Dates TBD*
+
+- **Saturnalia** (black sun): Before Risefest (17th December?). Chaos and mischief. Elect a "Lord of Misrule". Inversed hierarchy.
+- **Festival of the Innocents**: Before Loversnight. Masked party. Anonymity and roles.
 
 
 
