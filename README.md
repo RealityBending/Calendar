@@ -56,14 +56,17 @@ Work superiors treat to dinner. Rewards and vacations.
 
 ### Moonfest
 
-**Autumn equinox** *(2023 September 23 - Saturday)*. Fires are lit (no
-electricity). Coming of the **Dark Nights** and **Autumn**.
+**Autumn equinox** *(2023 September 23 - Saturday)*. Coming of the
+**Dark Nights** and **Autumn**. Beginning of the school year. Fires are
+lit (no electricity).
+[Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the
+successful readiness for the year to come.
 
 ### Harvestday
 
 **Day before the fullmoon between Moonfest and Risefest** *(2023 October
 29 - Sunday)*. Physical/sports games and competitions (hackathons)
-between colleagues.
+between colleagues with silly costumes.
 
 ### Deadsnight
 
