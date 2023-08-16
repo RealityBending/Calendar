@@ -283,11 +283,14 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Moonfest
 
-**Autumn equinox** `r format(celebrations["Moonfest"], "*(%Y %B %d - %A)*")`. Fires are lit (no electricity). Coming of the **Dark Nights** and **Autumn**.
+**Autumn equinox** `r format(celebrations["Moonfest"], "*(%Y %B %d - %A)*")`. 
+Coming of the **Dark Nights** and **Autumn**. Beginning of the school year.
+Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come.
 
 ### Harvestday
 
-**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. Physical/sports games and competitions (hackathons) between colleagues.
+**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. 
+Physical/sports games and competitions (hackathons) between colleagues with silly costumes.
 
 ### Deadsnight
 
