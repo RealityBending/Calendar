@@ -287,15 +287,15 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Harvestday
 
-**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. Physical/sport games and competitions between colleagues.
+**Day before the fullmoon between Moonfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. Physical/sports games and competitions (hackathons) between colleagues.
 
 ### Deadsnight
 
-**Fullmoon between Moonfest and Risefest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit to cemeteries. Start of **Winter**.
+**Fullmoon between Moonfest and Risefest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit cemeteries. Start of **Winter**.
 
 ### Risefest
 
-**Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. From that date until the 6th January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
+**Winter solstice** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. From that date until the 6th of January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
 
 ### Other  Celebrations 
 
