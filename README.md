@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **Summer**. The **Bright Days** are upon us, and we are in the
+We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Moonfest**](https://github.com/RealityBending/Calendar#Moonfest) in
-**0** days.
+[**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
+in **35** days.
 
 ## Important dates
 
