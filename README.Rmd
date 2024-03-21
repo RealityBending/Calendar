@@ -263,7 +263,7 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Sunfest
 
-**Spring equinox** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`. Eating eggs and water pranks. Coming of **Bright days** and **Spring**.
+**Spring equinox** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the winter spirit ([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/). Eating eggs and water pranks. 
 
 ### Loversnight
 
