@@ -31,8 +31,10 @@ Thursday)*. Team building and planning of the work roadmap for the year.
 
 ### Sunfest
 
-**Spring equinox** *(2024 March 20 - Wednesday)*. Eating eggs and water
-pranks. Coming of **Bright days** and **Spring**.
+**Spring equinox** *(2024 March 20 - Wednesday)*. Coming of **Bright
+days** and **Spring**. Drowning of the winter spirit
+([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/).
+Eating eggs and water pranks.
 
 ### Loversnight
 
