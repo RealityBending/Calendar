@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
-**38** days.
+**37** days.
 
 ## Important dates
 
