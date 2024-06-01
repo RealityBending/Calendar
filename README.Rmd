@@ -265,7 +265,7 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Risefest
 
-**Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the winter spirit ([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks. 
+**Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* ([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks. 
 
 ### Loversnight
 
@@ -287,7 +287,7 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 **Autumn equinox** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`. 
 Coming of the **Dark Nights** and **Autumn**. Beginning of the school year.
-Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come.
+Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest.
 
 ### Harvestday
 
