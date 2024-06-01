@@ -33,7 +33,7 @@ Winter retreat.
 ### Risefest
 
 **Spring equinox** *(2024 March 20 - Wednesday)*. Coming of **Bright
-days** and **Spring**. Drowning of the winter spirit
+days** and **Spring**. Drowning of the *Winter Woman*
 ([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)).
 Eating eggs and water pranks.
 
@@ -62,7 +62,9 @@ Work superiors treat to dinner. Rewards and vacations.
 **Autumn equinox** *(2024 September 22 - Sunday)*. Coming of the **Dark
 Nights** and **Autumn**. Beginning of the school year. Fires are lit (no
 electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki)
-symbolizing the successful readiness for the year to come.
+symbolizing the successful readiness for the year to come. We go on a
+walk and collect materials to create along the way the *Winter Woman*
+doll, that will stay in the lab until Risefest.
 
 ### Harvestday
 
