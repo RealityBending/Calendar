@@ -81,35 +81,31 @@ get_dates_celebrations <- function(year=2024){
 
   # Solar
   out <- c(
-    "Darkrise"=midpoint(astro_prev$Solstice_Winter, astro$Equinox_Spring),
+    "Preparationday"=midpoint(astro_prev$Solstice_Winter, astro$Equinox_Spring),  
     "Risefest"=astro$Equinox_Spring, 
-    "Brightrise"=midpoint(astro$Equinox_Spring, astro$Solstice_Summer),
+    "Flowerday"=midpoint(astro$Equinox_Spring, astro$Solstice_Summer),
     "Lightfest"=astro$Solstice_Summer,
-    "Brightfall"=midpoint(astro$Solstice_Summer, astro$Equinox_Autumn),
+    "Harvestday"=midpoint(astro$Solstice_Summer, astro$Equinox_Autumn),
     "Fallfest"=astro$Equinox_Autumn,  
-    "Darkfall"=midpoint(astro$Equinox_Autumn, astro$Solstice_Winter),
+    "Rootday"=midpoint(astro$Equinox_Autumn, astro$Solstice_Winter),
     "Nightfest"=astro$Solstice_Winter  
     )
   
   # Lunar
-  fullmoon_darkfall <- astro$Moon_Full[which.min(abs(out["Darkfall"]-astro$Moon_Full))]
-  fullmoon_darkrise <- astro$Moon_Full[which.min(abs(out["Darkrise"]-astro$Moon_Full))]
-  
   out <- c(
     out,
-    "Thanksday"=astro$Moon_Full[which.min(abs(out["Brightfall"]-astro$Moon_Full))],
-    "Harvestday"=fullmoon_darkfall,
-    "Deadsnight"=fullmoon_darkfall,
-    "Preparationday"=fullmoon_darkrise,
-    "Loversnight"=astro$Moon_Full[which.min(abs(out["Brightrise"]-astro$Moon_Full))],
-    "Lifesday"=astro$Moon_Full[which.min(abs(out["Brightrise"]-astro$Moon_Full))]
+    "Winenight"=max(astro$Moon_Full[out["Preparationday"]-astro$Moon_Full > 0]), # Before Preparationday,
+    "Innocentnight"=max(astro$Moon_Full[out["Risefest"]-astro$Moon_Full > 0]), # Before Risefest,
+    "Deadsnight"=max(astro$Moon_Full[out["Rootday"]-astro$Moon_Full > 0]), # Before Nightfest
+    "Loversnight"=astro$Moon_Full[which.min(abs(out["Flowerday"]-astro$Moon_Full))],  # Closest to Flowerday
+    "Blacksun"=max(astro$Moon_Full[out["Nightfest"]-astro$Moon_Full > 0]) # Before Nightfest
     )
   
   # Other
-  blacksun_dates <- out["Nightfest"]-(7:14)
-  out <- c(out,
-           "Blacksun" = blacksun_dates[weekdays(blacksun_dates) == "Friday"]
-  )
+  # blacksun_dates <- out["Nightfest"]-(7:14)
+  # out <- c(out,
+  #          "Blacksun" = blacksun_dates[weekdays(blacksun_dates) == "Friday"]
+  # )
 }
 ```
 
@@ -129,19 +125,19 @@ get_dates <- function(){
   next_date <- which.max(d)
   celeb <- names(next_date)
   
-  if (celeb %in% c("Thanksday", "Fallfest", "Brightfall")){
+  if (celeb %in% c("Fallfest", "Harvestday")){
     season <- "Summer"
     period <- "Bright Days"
     phase <- "Fall"
-  } else if (celeb %in% c("Harvestday", "Deadsnight", "Darkfall", "Nightfest")){
+  } else if (celeb %in% c("Rootday", "Deadsnight", "Nightfest")){
     season <- "Autumn"
     period <- "Dark Nights"
     phase <- "Fall"
-  } else if (celeb %in% c("Preparationday", "Risefest", "Darkrise")){
+  } else if (celeb %in% c("Winenight", "Risefest", "Preparationday")){
     season <- "Winter"
     period <- "Dark Nights"
     phase <- "Rise"
-  } else if (celeb %in% c("Loversnight", "Lifesday", "Brightrise", "Lightfest")){
+  } else if (celeb %in% c("Loversnight", "Lifesday", "Flowerday", "Lightfest")){
     season <- "Spring"
     period <- "Bright Days"
     phase <- "Rise"
@@ -182,9 +178,6 @@ cat(paste0("We are in **",
 ```
 
 
-## Important dates
-
-None yet.
 
 ## Celebrations
 
@@ -201,8 +194,7 @@ data <- data.frame(Day = days,
                    Celebration = NA,
                    Main = NA,
                    Type = ifelse(days %in% celebrations[c("Risefest", "Fallfest", "Nightfest", "Lightfest",
-                                                           "Darkrise", "Brightrise", "Darkfall", "Brightfall")], "Solar", 
-                                 ifelse(days %in% celebrations[c("Blacksun")], "Other", "Lunar")))
+                                                           "Preparationday", "Flowerday", "Rootday", "Harvestday")], "Solar", "Lunar"))
 
 for(i in 1:length(celebrations)) {
   if(is.na(data[data$Day == celebrations[i], "Celebration"])){
@@ -213,25 +205,33 @@ for(i in 1:length(celebrations)) {
 }
 
 data$Bar <- ifelse(is.na(data$Celebration), 0, 1)
+data$Width <- NA
+data$Width[data$Celebration %in% c("Nightfest", "Risefest", "Lightfest", "Fallfest")] <- 2
+data$Width[data$Celebration %in% c("Preparationday", "Flowerday", "Harvestday", "Rootday")] <- 1
+data$Width[data$Celebration %in% c("Winenight", "Innocentnight", "Loversnight", 
+                                   "Deadsnight", "Blacksun")] <- 1.5
 
-data$Main <- ifelse(data$Day %in% celebrations[c("Risefest", "Fallfest", "Nightfest", "Lightfest",
-                                                 "Harvestday", "Preparationday", "Thanksday", "Loversnight")], 2, ifelse(is.na(data$Celebration), NA, 0.5))
+
+
 # data$Bar[data$Type == "Solar" & data$Main == 0.5] <- 0
 data$Bar[data$Type == "Lunar"] <- 0.9
 data$Bar[data$Type == "Other"] <- 0.8
 
 data_segments <- data[!is.na(data$Celebration) & data$Type == "Solar", ]
 segments <- data.frame(
-  Day = data_segments$Day[data_segments$Main == 2],
-  xend = c(data_segments$Day[data_segments$Main != 2][2:4], max(data$Day)),
+  Day = data_segments$Day[data_segments$Celebration %in% c("Risefest", "Lightfest", "Fallfest")],
+  xend = data_segments$Day[data_segments$Celebration %in% c("Flowerday", "Harvestday", "Rootday")],
   y = 1)
-segments <- rbind(segments, data.frame(Day = min(data$Day), xend = data_segments$Day[1], y =1))
+# Add around beginning of year
+segments <- rbind(segments, 
+                  data.frame(Day=data_segments$Day[8], xend=max(data$Day), y=1),
+                  data.frame(Day=min(data$Day),  xend=data_segments$Day[1], y=1))
 
 
 
 
 ggplot(data, aes(x = Day, y=Bar)) +
-  geom_bar(aes(fill=Type), width=data$Main, stat = "identity", position="identity") +
+  geom_bar(aes(fill=Type), width=data$Width, stat = "identity", position="identity") +
   geom_segment(data = segments, aes(xend = xend, y = y, yend = y), color = "#f44336", linewidth = 2) +
   geom_bar(data=data.frame(Day = Sys.Date(), Bar=0.8), fill="black", width=3, stat = "identity", position="identity") +
   geom_text(aes(label=Celebration), y=1.25, size = 3, angle = 0, fontface="italic") +
@@ -256,62 +256,66 @@ ggplot(data, aes(x = Day, y=Bar)) +
 
 In the Reality Bending Lab, we follow an astronomical calendar. The year is divided in two main overlapping cycles, the **Rise/Fall** phases (December - June) and the **Dark nights/Bright days** periods (September - March). 
 
-*Note: this calendar is automatically updated daily thanks to an automated R script that account for the exact dates of the solar and lunar astronomical events (solstices, equinoxes, full moons) of the current year.*
+*Note: this calendar is automatically updated daily thanks to an automated R script that accounts for the exact dates of the solar and lunar astronomical events (solstices, equinoxes, full moons) of the current year.*
 
+
+### Winenight
+
+**Fullmoon before Preparationday** `r format(celebrations["Winenight"], "*(%Y %B %d - %A)*")`. Wine drinking. (See [Anthesteria](https://en.wikipedia.org/wiki/Anthesteria)).
 
 ### Preparationday
 
-**Fullmoon between Nightfest and Risefest** `r format(celebrations["Preparationday"], "*(%Y %B %d - %A)*")`. Team building and planning of the work roadmap for the year. Winter retreat.
+**Between Nightfest and Risefest** `r format(celebrations["Preparationday"], "*(%Y %B %d - %A)*")`. Ploughing and Sowing. Team building and planning of the work roadmap for the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
+
+### Festival of the Innocents
+
+**Fullmoon before Preparationday** `r format(celebrations["Innocentfest"], "*(%Y %B %d - %A)*")`. Masked party. Anonymity and roles. Wolves and sheep. Winter retreat. (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
+
 
 ### Risefest
 
-**Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* ([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks. 
+**Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* (See [Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks.
 
 ### Loversnight
 
-**Fullmoon between Risefest and Lightfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`. Celebration of partners and loved ones.
+**Fullmoon between Risefest and Lightfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`. Celebration of partners and loved ones. (see [Walpurgis' Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and [Beltane](https://en.wikipedia.org/wiki/Beltane))
 
-### Lifesday
+### Flowerday
 
-**Day after Loversnight** `r format(celebrations["Loversnight"] + 1, "*(%Y %B %d - %A)*")`. Visit to parents and family. Start of **Summer**.
+**Between Risefest and Lightfest** `r format(celebrations["Flowerday"], "*(%Y %B %d - %A)*")`. Celebration of life, youth and growth. Flowers in bloom and celebrations around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May Day](https://en.wikipedia.org/wiki/May_Day)).
 
 ### Lightfest
 
 **Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`. Crackers and fireworks at sunset. Popcorns made in fires in the night.
 
-### Thanksday
+### Harvestday
 
-**Fullmoon between Lightfest and Fallfest** `r format(celebrations["Thanksday"], "*(%Y %B %d - %A)*")`. Work superiors treat to dinner. Rewards and vacations.
+**Between Lightfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. We harvest the fruits of our work and relax. Work superiors treat to dinner. Rewards and vacations. Start of summer break. (See [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).  
+
 
 ### Fallfest
 
 **Autumn equinox** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`. 
 Coming of the **Dark Nights** and **Autumn**. Beginning of the school year.
-Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest.
-
-### Harvestday
-
-**Day before the fullmoon between Fallfest and Risefest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. 
-Physical/sports games and competitions (hackathons) between colleagues with silly costumes.
+Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest. Followed by a feast. (See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
 
 ### Deadsnight
 
-**Fullmoon between Fallfest and Nightfest** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit cemeteries. Start of **Winter**.
+**Fullmoon before Rootday** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain), [Halloween](https://en.wikipedia.org/wiki/Halloween)).
+
+### Rootday
+
+**Between Fallfest and Nightfest** `r format(celebrations["Rootday"], "*(%Y %B %d - %A)*")`. Nature is withering, and we prepare for the cold. Celebrate our roots and ancestors. Cultural and historical activities. 
 
 ### Blacksun
 
-- *The week before Nightfest* `r format(celebrations["Blacksun"], "*(%Y %B %d - %A)*")`. When darkness is winning: Chaos and mischief. Elect a "Lord of Misrule". Inversed hierarchy (see [Saturnalia](https://en.wikipedia.org/wiki/Saturnalia)).
+- **Fullmoon before Nightfest** `r format(celebrations["Blacksun"], "*(%Y %B %d - %A)*")`. When darkness is winning: Chaos and mischief. Elect a "Lord of Misrule". Inversed hierarchy (see [Saturnalia](https://en.wikipedia.org/wiki/Saturnalia)).
 
 ### Nightfest
 
 **Winter solstice** `r format(celebrations["Nightfest"], "*(%Y %B %d - %A)*")`. From that date until the 6th of January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
 
-### Other  Celebrations 
 
-*Dates TBD*
+### Other (to be done)
 
-
-- **Festival of the Innocents**: Before Loversnight. Masked party. Anonymity and roles.
-
-
-
+- Move Loversnight to be consistently before/after FLowerday?

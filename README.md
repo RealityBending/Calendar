@@ -6,10 +6,6 @@ time of the **Rise**. The next celebration is
 [**Lightfest**](https://github.com/RealityBending/Calendar#Lightfest) in
 **8** days.
 
-## Important dates
-
-None yet.
-
 ## Celebrations
 
 ![](calendar_plot-1.png)<!-- -->
@@ -20,42 +16,61 @@ is divided in two main overlapping cycles, the **Rise/Fall** phases
 (September - March).
 
 *Note: this calendar is automatically updated daily thanks to an
-automated R script that account for the exact dates of the solar and
+automated R script that accounts for the exact dates of the solar and
 lunar astronomical events (solstices, equinoxes, full moons) of the
 current year.*
 
+### Winenight
+
+**Fullmoon before Preparationday** *(2024 January 25 - Thursday)*. Wine
+drinking. (See
+[Anthesteria](https://en.wikipedia.org/wiki/Anthesteria)).
+
 ### Preparationday
 
-**Fullmoon between Nightfest and Risefest** *(2024 January 25 -
-Thursday)*. Team building and planning of the work roadmap for the year.
-Winter retreat.
+**Between Nightfest and Risefest** *(2024 February 04 - Sunday)*.
+Ploughing and Sowing. Team building and planning of the work roadmap for
+the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
+
+### Festival of the Innocents
+
+**Fullmoon before Preparationday** NA. Masked party. Anonymity and
+roles. Wolves and sheep. Winter retreat. (See
+[Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of
+Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
 
 ### Risefest
 
 **Spring equinox** *(2024 March 20 - Wednesday)*. Coming of **Bright
-days** and **Spring**. Drowning of the *Winter Woman*
-([Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)).
+days** and **Spring**. Drowning of the *Winter Woman* (See
+[Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)).
 Eating eggs and water pranks.
 
 ### Loversnight
 
 **Fullmoon between Risefest and Lightfest** *(2024 April 23 - Tuesday
-night)*. Celebration of partners and loved ones.
+night)*. Celebration of partners and loved ones. (see [Walpurgis’
+Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and
+[Beltane](https://en.wikipedia.org/wiki/Beltane))
 
-### Lifesday
+### Flowerday
 
-**Day after Loversnight** *(2024 April 24 - Wednesday)*. Visit to
-parents and family. Start of **Summer**.
+**Between Risefest and Lightfest** *(2024 May 05 - Sunday)*. Celebration
+of life, youth and growth. Flowers in bloom and celebrations around the
+tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May
+Day](https://en.wikipedia.org/wiki/May_Day)).
 
 ### Lightfest
 
 **Summer solstice** *(2024 June 21 - Friday)*. Crackers and fireworks at
 sunset. Popcorns made in fires in the night.
 
-### Thanksday
+### Harvestday
 
-**Fullmoon between Lightfest and Fallfest** *(2024 August 19 - Monday)*.
-Work superiors treat to dinner. Rewards and vacations.
+**Between Lightfest and Fallfest** *(2024 August 06 - Tuesday)*. We
+harvest the fruits of our work and relax. Work superiors treat to
+dinner. Rewards and vacations. Start of summer break. (See
+[Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).
 
 ### Fallfest
 
@@ -64,22 +79,25 @@ Nights** and **Autumn**. Beginning of the school year. Fires are lit (no
 electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki)
 symbolizing the successful readiness for the year to come. We go on a
 walk and collect materials to create along the way the *Winter Woman*
-doll, that will stay in the lab until Risefest.
-
-### Harvestday
-
-**Day before the fullmoon between Fallfest and Risefest** *(2024
-November 16 - Saturday)*. Physical/sports games and competitions
-(hackathons) between colleagues with silly costumes.
+doll, that will stay in the lab until Risefest. Followed by a feast.
+(See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and
+[Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
 
 ### Deadsnight
 
-**Fullmoon between Fallfest and Nightfest** *(2024 November 16 -
-Saturday)*. Visit cemeteries. Start of **Winter**.
+**Fullmoon before Rootday** *(2024 October 17 - Thursday)*. Visit
+cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain),
+[Halloween](https://en.wikipedia.org/wiki/Halloween)).
+
+### Rootday
+
+**Between Fallfest and Nightfest** *(2024 November 06 - Wednesday)*.
+Nature is withering, and we prepare for the cold. Celebrate our roots
+and ancestors. Cultural and historical activities.
 
 ### Blacksun
 
-- *The week before Nightfest* *(2024 December 13 - Friday)*. When
+- **Fullmoon before Nightfest** *(2024 December 15 - Sunday)*. When
   darkness is winning: Chaos and mischief. Elect a “Lord of Misrule”.
   Inversed hierarchy (see
   [Saturnalia](https://en.wikipedia.org/wiki/Saturnalia)).
@@ -90,9 +108,6 @@ Saturday)*. Visit cemeteries. Start of **Winter**.
 until the 6th of January, people keep a tree inside of their houses. On
 the 21th, it is decorated with garlands, and people drink snake wine.
 
-### Other Celebrations
+### Other (to be done)
 
-*Dates TBD*
-
-- **Festival of the Innocents**: Before Loversnight. Masked party.
-  Anonymity and roles.
+- Move Loversnight to be consistently before/after FLowerday?
