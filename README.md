@@ -4,7 +4,7 @@
 We are in **Spring**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Lightfest**](https://github.com/RealityBending/Calendar#Lightfest) in
-**5** days.
+**4** days.
 
 ## Celebrations
 
