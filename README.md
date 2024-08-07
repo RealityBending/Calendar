@@ -3,8 +3,8 @@
 
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
-in **0** days.
+[**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
+**46** days.
 
 ## Celebrations
 
