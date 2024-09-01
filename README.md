@@ -87,7 +87,7 @@ doll, that will stay in the lab until Risefest. Followed by a feast.
 
 **Fullmoon before Rootday** *(2024 October 17 - Thursday)*. Visit
 cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain),
-[Halloween](https://en.wikipedia.org/wiki/Halloween)).
+[Halloween](https://en.wikipedia.org/wiki/Halloween), [Dziady](https://en.wikipedia.org/wiki/Dziady)).
 
 ### Rootday
 
