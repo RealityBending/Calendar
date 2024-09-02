@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
-**21** days.
+**20** days.
 
 ## Celebrations
 
@@ -87,7 +87,7 @@ doll, that will stay in the lab until Risefest. Followed by a feast.
 
 **Fullmoon before Rootday** *(2024 October 17 - Thursday)*. Visit
 cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain),
-[Halloween](https://en.wikipedia.org/wiki/Halloween), [Dziady](https://en.wikipedia.org/wiki/Dziady)).
+[Halloween](https://en.wikipedia.org/wiki/Halloween)).
 
 ### Rootday
 
