@@ -32,37 +32,7 @@ library(fmdates)
 ```
 
 ```{r astromical_events, echo = FALSE}
-# Define convenience function (needs to 'chillR' and the 'lunar' package) to find dates of solstices, equinoxes, full moons and new moons for a given year.
-get_dates_atronomical <- function(year=2023){
-  dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
-  days <- chillR::make_JDay(data.frame(Year=format(dates, "%Y"),Month=format(dates, "%m"),Day=format(dates, "%d")))
-  daylength <- chillR::daylength(latitude = 50.8229, days$JDay)$Daylength  # Latitude in Brighton, UK
-
-  # Solstice
-  solstice_winter <- as.Date(dates[which(daylength==min(daylength))])
-  solstice_summer <- as.Date(dates[which(daylength==max(daylength))])
-  
-  # Equinox
-  equinox_spring <- as.Date(fmdates:::equinox(year, season = "mar", tz = "GMT"))
-  equinox_autumn <- as.Date(fmdates:::equinox(year, season = "sep", tz = "GMT"))
-  
-  # Full moons
-  phase <- lunar::lunar.illumination(dates)
-  moon <- data.frame(dates = as.Date(dates), 
-                     phase = phase,
-                     newmoon = FALSE,
-                     fullmoon = FALSE)
-  moon[which(diff(sign(diff(phase)))==-2)+1, "fullmoon"] <- TRUE 
-  moon[which(diff(sign(diff(phase)))==2)+2, "newmoon"] <- TRUE 
-  
-  list("Solstice_Summer"=solstice_summer, 
-       "Solstice_Winter"=solstice_winter,
-       "Equinox_Autumn"=equinox_autumn, 
-       "Equinox_Spring"=equinox_spring,
-       "Moon_Full"=moon[moon$fullmoon==TRUE, "dates"],
-       "Moon_New"=moon[moon$newmoon==TRUE, "dates"],
-       "Dates"=dates)
-}
+source("https://raw.githubusercontent.com/RealityBending/scripts/main/astronomical_dates.R")
 ```
 
 ```{r dates_celebrations, echo = FALSE}
@@ -74,10 +44,10 @@ get_dates_celebrations <- function(year=2024){
     days[round(length(days) / 2)]
   }
   
-  # Get dates
-  astro_prev <- get_dates_atronomical(year=year-1)
-  astro <- get_dates_atronomical(year=year)
-  astro_next <- get_dates_atronomical(year=year+1)
+  # Get dates (latitude in Brightonn UK)
+  astro_prev <- astronomical_dates(year=year-1, latitude = 50.8229)
+  astro <- astronomical_dates(year=year, latitude = 50.8229)
+  astro_next <- astronomical_dates(year=year+1, latitude = 50.8229)
 
   # Solar
   out <- c(
@@ -286,7 +256,7 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Lightfest
 
-**Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`. Crackers and fireworks at sunset. Popcorns made in fires in the night.
+**Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`. Crackers and fireworks at sunset. Popcorns made in fires in the night. (See [Kupala Night](https://en.wikipedia.org/wiki/Kupala_Night)).
 
 ### Harvestday
 

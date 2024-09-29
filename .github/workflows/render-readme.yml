@@ -18,7 +18,7 @@ jobs:
             - name: Install rmarkdown
               run: Rscript -e 'install.packages("rmarkdown")'
             - name: Install dependencies
-              run: Rscript -e 'install.packages(c("chillR", "fmdates", "lunar", "ggplot2"), dependencies = TRUE)'
+              run: Rscript -e 'install.packages(c("chillR", "lunar", "ggplot2"), dependencies = TRUE)'
             - name: Render README
               run: Rscript -e 'rmarkdown::render("README.Rmd")'
             - name: Commit results
