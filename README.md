@@ -34,10 +34,10 @@ the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
 
 ### Festival of the Innocents
 
-**Fullmoon before Preparationday** NA. Masked party. Anonymity and
-roles. Wolves and sheep. Winter retreat. (See
-[Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of
-Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
+**Fullmoon before Preparationday** *(2024 February 24 - Saturday)*.
+Masked party. Anonymity and roles. Wolves and sheep. Winter retreat.
+(See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and
+[Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
 
 ### Risefest
 
