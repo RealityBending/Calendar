@@ -28,7 +28,6 @@ options(knitr.kable.NA = '',
 # Dependencies
 library(chillR)
 library(lunar)
-library(fmdates)
 ```
 
 ```{r astromical_events, echo = FALSE}
