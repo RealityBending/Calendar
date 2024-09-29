@@ -230,58 +230,83 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Winenight
 
-**Fullmoon before Preparationday** `r format(celebrations["Winenight"], "*(%Y %B %d - %A)*")`. Wine drinking. (See [Anthesteria](https://en.wikipedia.org/wiki/Anthesteria)).
+- **Fullmoon before Preparationday** `r format(celebrations["Winenight"], "*(%Y %B %d - %A)*")`
+
+Wine drinking. (See [Anthesteria](https://en.wikipedia.org/wiki/Anthesteria)).
 
 ### Preparationday
 
-**Between Nightfest and Risefest** `r format(celebrations["Preparationday"], "*(%Y %B %d - %A)*")`. Ploughing and Sowing. Team building and planning of the work roadmap for the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
+- **Between Nightfest and Risefest** `r format(celebrations["Preparationday"], "*(%Y %B %d - %A)*")`
+
+Ploughing and Sowing. Team building and planning of the work roadmap for the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
 
 ### Festival of the Innocents
 
-**Fullmoon before Preparationday** `r format(celebrations["Innocentnight"], "*(%Y %B %d - %A)*")`. Masked party. Anonymity and roles. Wolves and sheep. Winter retreat. (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
+- **Fullmoon before Preparationday** `r format(celebrations["Innocentnight"], "*(%Y %B %d - %A)*")`
+
+Masked party. Anonymity and roles. Wolves and sheep. Winter retreat. (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
 
 
 ### Risefest
 
-**Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`. Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* (See [Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks.
+- **Spring equinox** `r format(celebrations["Risefest"], "*(%Y %B %d - %A)*")`
+
+Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* (See [Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)). Eating eggs and water pranks.
 
 ### Loversnight
 
-**Fullmoon between Risefest and Lightfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`. Celebration of partners and loved ones. (see [Walpurgis' Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and [Beltane](https://en.wikipedia.org/wiki/Beltane))
+- **Fullmoon between Risefest and Lightfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`
+
+Celebration of partners and loved ones. (see [Walpurgis' Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and [Beltane](https://en.wikipedia.org/wiki/Beltane))
 
 ### Flowerday
 
-**Between Risefest and Lightfest** `r format(celebrations["Flowerday"], "*(%Y %B %d - %A)*")`. Celebration of life, youth and growth. Flowers in bloom and celebrations around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May Day](https://en.wikipedia.org/wiki/May_Day)).
+- **Between Risefest and Lightfest** `r format(celebrations["Flowerday"], "*(%Y %B %d - %A)*")`
+
+Celebration of life, youth and growth. Flowers in bloom and celebrations around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May Day](https://en.wikipedia.org/wiki/May_Day)).
 
 ### Lightfest
 
-**Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`. Crackers and fireworks at sunset. Popcorns made in fires in the night. (See [Kupala Night](https://en.wikipedia.org/wiki/Kupala_Night)).
+- **Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`
+
+Crackers and fireworks at sunset. Popcorns made in fires in the night. (See [Kupala Night](https://en.wikipedia.org/wiki/Kupala_Night)).
 
 ### Harvestday
 
-**Between Lightfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. We harvest the fruits of our work and relax. Work superiors treat to dinner. Rewards and vacations. Start of summer break. (See [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).  
+- **Between Lightfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`
+
+We harvest the fruits of our work and relax. Work superiors treat to dinner. Rewards and vacations. Start of summer break. (See [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).  
 
 ### Fallfest
 
-**Autumn equinox** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`. 
+- **Autumn equinox** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`
+
 Coming of the **Dark Nights** and **Autumn**. Beginning of the school year.
 Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. (See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
 
 ### Deadsnight
 
-**Fullmoon before Rootday** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`.We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest. Followed by a *spooky hackathon* (See [Samhain](https://en.wikipedia.org/wiki/Samhain), [Halloween](https://en.wikipedia.org/wiki/Halloween)).
+- **Fullmoon before Rootday** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`
+
+We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest. Followed by a *spooky hackathon* (See [Samhain](https://en.wikipedia.org/wiki/Samhain), [Halloween](https://en.wikipedia.org/wiki/Halloween)).
 
 ### Rootday
 
-**Between Fallfest and Nightfest** `r format(celebrations["Rootday"], "*(%Y %B %d - %A)*")`. Nature is withering, and we prepare for the cold. Celebrate our roots and ancestors. Cultural and historical activities.
+- **Between Fallfest and Nightfest** `r format(celebrations["Rootday"], "*(%Y %B %d - %A)*")`
+
+Nature is withering, and we prepare for the cold. Celebrate our roots and ancestors. Cultural and historical activities.
 
 ### Blacksun
 
-- **Fullmoon before Nightfest** `r format(celebrations["Blacksun"], "*(%Y %B %d - %A)*")`. When darkness is winning: Chaos and mischief. Elect a "Lord of Misrule". Inversed hierarchy (see [Saturnalia](https://en.wikipedia.org/wiki/Saturnalia)).
+- **Fullmoon before Nightfest** `r format(celebrations["Blacksun"], "*(%Y %B %d - %A)*")`
+
+When darkness is winning: Chaos and mischief. Elect a "Lord of Misrule". Inversed hierarchy (see [Saturnalia](https://en.wikipedia.org/wiki/Saturnalia)).
 
 ### Nightfest
 
-**Winter solstice** `r format(celebrations["Nightfest"], "*(%Y %B %d - %A)*")`. From that date until the 6th of January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
+- **Winter solstice** `r format(celebrations["Nightfest"], "*(%Y %B %d - %A)*")`
+
+From that date until the 6th of January, people keep a tree inside of their houses. On the 21th, it is decorated with garlands, and people drink snake wine.
 
 
 ### Other (to be done)
