@@ -238,7 +238,7 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 ### Festival of the Innocents
 
-**Fullmoon before Preparationday** `r format(celebrations["Innocentfest"], "*(%Y %B %d - %A)*")`. Masked party. Anonymity and roles. Wolves and sheep. Winter retreat. (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
+**Fullmoon before Preparationday** `r format(celebrations["Innocentnight"], "*(%Y %B %d - %A)*")`. Masked party. Anonymity and roles. Wolves and sheep. Winter retreat. (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and [Carnival of Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
 
 
 ### Risefest
