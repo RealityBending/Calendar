@@ -261,20 +261,19 @@ In the Reality Bending Lab, we follow an astronomical calendar. The year is divi
 
 **Between Lightfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`. We harvest the fruits of our work and relax. Work superiors treat to dinner. Rewards and vacations. Start of summer break. (See [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).  
 
-
 ### Fallfest
 
 **Autumn equinox** `r format(celebrations["Fallfest"], "*(%Y %B %d - %A)*")`. 
 Coming of the **Dark Nights** and **Autumn**. Beginning of the school year.
-Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest. Followed by a feast. (See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
+Fires are lit (no electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the successful readiness for the year to come. (See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
 
 ### Deadsnight
 
-**Fullmoon before Rootday** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`. Visit cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain), [Halloween](https://en.wikipedia.org/wiki/Halloween)).
+**Fullmoon before Rootday** `r format(celebrations["Deadsnight"], "*(%Y %B %d - %A)*")`.We go on a walk and collect materials to create along the way the *Winter Woman* doll, that will stay in the lab until Risefest. Followed by a *spooky hackathon* (See [Samhain](https://en.wikipedia.org/wiki/Samhain), [Halloween](https://en.wikipedia.org/wiki/Halloween)).
 
 ### Rootday
 
-**Between Fallfest and Nightfest** `r format(celebrations["Rootday"], "*(%Y %B %d - %A)*")`. Nature is withering, and we prepare for the cold. Celebrate our roots and ancestors. Cultural and historical activities. 
+**Between Fallfest and Nightfest** `r format(celebrations["Rootday"], "*(%Y %B %d - %A)*")`. Nature is withering, and we prepare for the cold. Celebrate our roots and ancestors. Cultural and historical activities.
 
 ### Blacksun
 
