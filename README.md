@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **Summer**. The **Bright Days** are upon us, and we are in the
+We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
-**6** days.
+[**Deadsnight**](https://github.com/RealityBending/Calendar#Deadsnight)
+in **18** days.
 
 ## Celebrations
 
@@ -28,7 +28,7 @@ drinking. (See
 
 ### Preparationday
 
-**Between Nightfest and Risefest** *(2024 February 04 - Sunday)*.
+**Between Nightfest and Risefest** *(2024 February 03 - Saturday)*.
 Ploughing and Sowing. Team building and planning of the work roadmap for
 the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
 
@@ -41,8 +41,8 @@ Venice](https://en.wikipedia.org/wiki/Carnival_of_Venice)).
 
 ### Risefest
 
-**Spring equinox** *(2024 March 20 - Wednesday)*. Coming of **Bright
-days** and **Spring**. Drowning of the *Winter Woman* (See
+**Spring equinox** *(2024 March 17 - Sunday)*. Coming of **Bright days**
+and **Spring**. Drowning of the *Winter Woman* (See
 [Marzanna](https://wpna.fm/polish-traditions-the-drowning-of-marzanna/)).
 Eating eggs and water pranks.
 
@@ -55,7 +55,7 @@ Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and
 
 ### Flowerday
 
-**Between Risefest and Lightfest** *(2024 May 05 - Sunday)*. Celebration
+**Between Risefest and Lightfest** *(2024 May 03 - Friday)*. Celebration
 of life, youth and growth. Flowers in bloom and celebrations around the
 tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May
 Day](https://en.wikipedia.org/wiki/May_Day)).
@@ -63,24 +63,26 @@ Day](https://en.wikipedia.org/wiki/May_Day)).
 ### Lightfest
 
 **Summer solstice** *(2024 June 21 - Friday)*. Crackers and fireworks at
-sunset. Popcorns made in fires in the night.
+sunset. Popcorns made in fires in the night. (See [Kupala
+Night](https://en.wikipedia.org/wiki/Kupala_Night)).
 
 ### Harvestday
 
-**Between Lightfest and Fallfest** *(2024 August 06 - Tuesday)*. We
+**Between Lightfest and Fallfest** *(2024 August 07 - Wednesday)*. We
 harvest the fruits of our work and relax. Work superiors treat to
 dinner. Rewards and vacations. Start of summer break. (See
 [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).
 
 ### Fallfest
 
-**Autumn equinox** *(2024 September 22 - Sunday)*. Coming of the **Dark
-Nights** and **Autumn**. Beginning of the school year. Fires are lit (no
-electricity). [Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki)
-symbolizing the successful readiness for the year to come. We go on a
-walk and collect materials to create along the way the *Winter Woman*
-doll, that will stay in the lab until Risefest. Followed by a feast.
-(See [Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and
+**Autumn equinox** *(2024 September 25 - Wednesday)*. Coming of the
+**Dark Nights** and **Autumn**. Beginning of the school year. Fires are
+lit (no electricity).
+[Wreaths](https://en.wikipedia.org/wiki/Do%C5%BCynki) symbolizing the
+successful readiness for the year to come. We go on a walk and collect
+materials to create along the way the *Winter Woman* doll, that will
+stay in the lab until Risefest. Followed by a feast. (See
+[Oktoberfest](https://en.wikipedia.org/wiki/Oktoberfest) and
 [Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving)).
 
 ### Deadsnight
@@ -91,7 +93,7 @@ cemeteries. (See [Samhain](https://en.wikipedia.org/wiki/Samhain),
 
 ### Rootday
 
-**Between Fallfest and Nightfest** *(2024 November 06 - Wednesday)*.
+**Between Fallfest and Nightfest** *(2024 November 07 - Thursday)*.
 Nature is withering, and we prepare for the cold. Celebrate our roots
 and ancestors. Cultural and historical activities.
 
