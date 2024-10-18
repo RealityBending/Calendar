@@ -3,8 +3,8 @@
 
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Deadsnight**](https://github.com/RealityBending/Calendar#Deadsnight)
-in **0** days.
+[**Rootday**](https://github.com/RealityBending/Calendar#Rootday) in
+**20** days.
 
 ## Celebrations
 
