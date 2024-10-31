@@ -4,7 +4,7 @@
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Rootday**](https://github.com/RealityBending/Calendar#Rootday) in
-**8** days.
+**7** days.
 
 ## Celebrations
 
