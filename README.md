@@ -4,7 +4,7 @@
 We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
 time of the **FAILURE**. The next celebration is
 [**Blacksun**](https://github.com/RealityBending/Calendar#Blacksun) in
-**14** days (@DominiqueMakowski).
+**13** days.
 
 ## Celebrations
 
