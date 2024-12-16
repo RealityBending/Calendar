@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
-time of the **FAILURE**. The next celebration is
-[**Blacksun**](https://github.com/RealityBending/Calendar#Blacksun) in
-**0** days.
+We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
+time of the **Fall**. The next celebration is
+[**Nightfest**](https://github.com/RealityBending/Calendar#Nightfest) in
+**5** days.
 
 ## Celebrations
 
