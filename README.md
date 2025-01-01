@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Winenight**](https://github.com/RealityBending/Calendar#Winenight) in
-**14** days (@DominiqueMakowski).
+**13** days.
 
 ## Celebrations
 
@@ -22,21 +22,21 @@ current year.*
 
 ### Winenight
 
-- **Fullmoon before Preparationday** *(2024 January 25 - Thursday)*
+- **Fullmoon before Preparationday** *(2025 January 14 - Tuesday)*
 
 Wine drinking. (See
 [Anthesteria](https://en.wikipedia.org/wiki/Anthesteria)).
 
 ### Preparationday
 
-- **Between Nightfest and Risefest** *(2024 February 03 - Saturday)*
+- **Between Nightfest and Risefest** *(2025 February 02 - Sunday)*
 
 Ploughing and Sowing. Team building and planning of the work roadmap for
 the year. (See [Imbolc](https://en.wikipedia.org/wiki/Imbolc)).
 
 ### Festival of the Innocents
 
-- **Fullmoon before Preparationday** *(2024 February 24 - Saturday)*
+- **Fullmoon before Preparationday** *(2025 March 14 - Friday)*
 
 Masked party. Anonymity and roles. Wolves and sheep. Winter retreat.
 (See [Lupercalia](https://en.wikipedia.org/wiki/Lupercalia) and
@@ -44,7 +44,7 @@ Masked party. Anonymity and roles. Wolves and sheep. Winter retreat.
 
 ### Risefest
 
-- **Spring equinox** *(2024 March 17 - Sunday)*
+- **Spring equinox** *(2025 March 18 - Tuesday)*
 
 Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman*
 (See
@@ -53,7 +53,7 @@ Eating eggs and water pranks.
 
 ### Loversnight
 
-- **Fullmoon between Risefest and Lightfest** *(2024 April 23 - Tuesday
+- **Fullmoon between Risefest and Lightfest** *(2025 May 12 - Monday
   night)*
 
 Celebration of partners and loved ones. (see [Walpurgis’
@@ -62,7 +62,7 @@ Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and
 
 ### Flowerday
 
-- **Between Risefest and Lightfest** *(2024 May 03 - Friday)*
+- **Between Risefest and Lightfest** *(2025 May 04 - Sunday)*
 
 Celebration of life, youth and growth. Flowers in bloom and celebrations
 around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia)
@@ -70,14 +70,14 @@ and [May Day](https://en.wikipedia.org/wiki/May_Day)).
 
 ### Lightfest
 
-- **Summer solstice** *(2024 June 21 - Friday)*
+- **Summer solstice** *(2025 June 22 - Sunday)*
 
 Crackers and fireworks at sunset. Popcorns made in fires in the night.
 (See [Kupala Night](https://en.wikipedia.org/wiki/Kupala_Night)).
 
 ### Harvestday
 
-- **Between Lightfest and Fallfest** *(2024 August 07 - Wednesday)*
+- **Between Lightfest and Fallfest** *(2025 August 08 - Friday)*
 
 We harvest the fruits of our work and relax. Work superiors treat to
 dinner. Rewards and vacations. Start of summer break. (See
@@ -85,7 +85,7 @@ dinner. Rewards and vacations. Start of summer break. (See
 
 ### Fallfest
 
-- **Autumn equinox** *(2024 September 25 - Wednesday)*
+- **Autumn equinox** *(2025 September 26 - Friday)*
 
 Coming of the **Dark Nights** and **Autumn**. Beginning of the school
 year. Fires are lit (no electricity).
@@ -96,7 +96,7 @@ successful readiness for the year to come. (See
 
 ### Deadsnight
 
-- **Fullmoon before Rootday** *(2024 October 17 - Thursday)*
+- **Fullmoon before Rootday** *(2025 November 05 - Wednesday)*
 
 We go on a walk and collect materials to create along the way the
 *Winter Woman* doll, that will stay in the lab until Risefest. Followed
@@ -106,14 +106,14 @@ by a *spooky hackathon* (See
 
 ### Rootday
 
-- **Between Fallfest and Nightfest** *(2024 November 07 - Thursday)*
+- **Between Fallfest and Nightfest** *(2025 November 08 - Saturday)*
 
 Nature is withering, and we prepare for the cold. Celebrate our roots
 and ancestors. Cultural and historical activities.
 
 ### Blacksun
 
-- **Fullmoon before Nightfest** *(2024 December 15 - Sunday)*
+- **Fullmoon before Nightfest** *(2025 December 05 - Friday)*
 
 When darkness is winning: Chaos and mischief. Elect a “Lord of Misrule”.
 Inversed hierarchy (see
@@ -121,7 +121,7 @@ Inversed hierarchy (see
 
 ### Nightfest
 
-- **Winter solstice** *(2024 December 21 - Saturday)*
+- **Winter solstice** *(2025 December 22 - Monday)*
 
 From that date until the 6th of January, people keep a tree inside of
 their houses. On the 21th, it is decorated with garlands, and people
