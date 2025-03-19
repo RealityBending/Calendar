@@ -1,10 +1,10 @@
 
 # Calendar
 
-We are in **Winter**. The **Dark Nights** are upon us, and we are in the
+We are in **Spring**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
-[**Risefest**](https://github.com/RealityBending/Calendar#Risefest) in
-**0** days.
+[**Flowerday**](https://github.com/RealityBending/Calendar#Flowerday) in
+**46** days.
 
 ## Celebrations
 
