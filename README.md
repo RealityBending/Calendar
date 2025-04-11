@@ -4,7 +4,7 @@
 We are in **Spring**. The **Bright Days** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Flowerday**](https://github.com/RealityBending/Calendar#Flowerday) in
-**24** days.
+**23** days.
 
 ## Celebrations
 
