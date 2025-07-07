@@ -53,7 +53,7 @@ Eating eggs and water pranks.
 
 ### Loversnight
 
-- **Fullmoon between Risefest and Lightfest** *(2025 May 12 - Monday
+- **Fullmoon between Risefest and Sunfest** *(2025 May 12 - Monday
   night)*
 
 Celebration of partners and loved ones. (see [Walpurgis’
@@ -62,13 +62,13 @@ Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and
 
 ### Flowerday
 
-- **Between Risefest and Lightfest** *(2025 May 04 - Sunday)*
+- **Between Risefest and Sunfest** *(2025 May 04 - Sunday)*
 
 Celebration of life, youth and growth. Flowers in bloom and celebrations
 around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia)
 and [May Day](https://en.wikipedia.org/wiki/May_Day)).
 
-### Lightfest
+### Sunfest
 
 - **Summer solstice** *(2025 June 22 - Sunday)*
 
@@ -77,7 +77,7 @@ Crackers and fireworks at sunset. Popcorns made in fires in the night.
 
 ### Harvestday
 
-- **Between Lightfest and Fallfest** *(2025 August 08 - Friday)*
+- **Between Sunfest and Fallfest** *(2025 August 08 - Friday)*
 
 We harvest the fruits of our work and relax. Work superiors treat to
 dinner. Rewards and vacations. Start of summer break. (See
