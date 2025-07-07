@@ -53,7 +53,7 @@ get_dates_celebrations <- function(year=2024){
     "Preparationday"=midpoint(astro_prev$Solstice_Winter, astro$Equinox_Spring),  
     "Risefest"=astro$Equinox_Spring, 
     "Flowerday"=midpoint(astro$Equinox_Spring, astro$Solstice_Summer),
-    "Lightfest"=astro$Solstice_Summer,
+    "Sunfest"=astro$Solstice_Summer,
     "Harvestday"=midpoint(astro$Solstice_Summer, astro$Equinox_Autumn),
     "Fallfest"=astro$Equinox_Autumn,  
     "Rootday"=midpoint(astro$Equinox_Autumn, astro$Solstice_Winter),
@@ -106,7 +106,7 @@ get_dates <- function(){
     season <- "Winter"
     period <- "Dark Nights"
     phase <- "Rise"
-  } else if (celeb %in% c("Loversnight", "Lifesday", "Flowerday", "Lightfest")){
+  } else if (celeb %in% c("Loversnight", "Lifesday", "Flowerday", "Sunfest")){
     season <- "Spring"
     period <- "Bright Days"
     phase <- "Rise"
@@ -162,7 +162,7 @@ celebrations <- get_dates_celebrations(year)
 data <- data.frame(Day = days,
                    Celebration = NA,
                    Main = NA,
-                   Type = ifelse(days %in% celebrations[c("Risefest", "Fallfest", "Nightfest", "Lightfest",
+                   Type = ifelse(days %in% celebrations[c("Risefest", "Fallfest", "Nightfest", "Sunfest",
                                                            "Preparationday", "Flowerday", "Rootday", "Harvestday")], "Solar", "Lunar"))
 
 for(i in 1:length(celebrations)) {
@@ -175,7 +175,7 @@ for(i in 1:length(celebrations)) {
 
 data$Bar <- ifelse(is.na(data$Celebration), 0, 1)
 data$Width <- NA
-data$Width[data$Celebration %in% c("Nightfest", "Risefest", "Lightfest", "Fallfest")] <- 2
+data$Width[data$Celebration %in% c("Nightfest", "Risefest", "Sunfest", "Fallfest")] <- 2
 data$Width[data$Celebration %in% c("Preparationday", "Flowerday", "Harvestday", "Rootday")] <- 1
 data$Width[data$Celebration %in% c("Winenight", "Innocentnight", "Loversnight", 
                                    "Deadsnight", "Blacksun")] <- 1.5
@@ -188,7 +188,7 @@ data$Bar[data$Type == "Other"] <- 0.8
 
 data_segments <- data[!is.na(data$Celebration) & data$Type == "Solar", ]
 segments <- data.frame(
-  Day = data_segments$Day[data_segments$Celebration %in% c("Risefest", "Lightfest", "Fallfest")],
+  Day = data_segments$Day[data_segments$Celebration %in% c("Risefest", "Sunfest", "Fallfest")],
   xend = data_segments$Day[data_segments$Celebration %in% c("Flowerday", "Harvestday", "Rootday")],
   y = 1)
 # Add around beginning of year
@@ -255,25 +255,25 @@ Coming of **Bright days** and **Spring**. Drowning of the *Winter Woman* (See [M
 
 ### Loversnight
 
-- **Fullmoon between Risefest and Lightfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`
+- **Fullmoon between Risefest and Sunfest** `r format(celebrations["Loversnight"], "*(%Y %B %d - %A night)*")`
 
 Celebration of partners and loved ones. (see [Walpurgis' Night](https://en.wikipedia.org/wiki/Walpurgis_Night) and [Beltane](https://en.wikipedia.org/wiki/Beltane))
 
 ### Flowerday
 
-- **Between Risefest and Lightfest** `r format(celebrations["Flowerday"], "*(%Y %B %d - %A)*")`
+- **Between Risefest and Sunfest** `r format(celebrations["Flowerday"], "*(%Y %B %d - %A)*")`
 
 Celebration of life, youth and growth. Flowers in bloom and celebrations around the tree. (See [Floria](https://en.wikipedia.org/wiki/Floralia) and [May Day](https://en.wikipedia.org/wiki/May_Day)).
 
-### Lightfest
+### Sunfest
 
-- **Summer solstice** `r format(celebrations["Lightfest"], "*(%Y %B %d - %A)*")`
+- **Summer solstice** `r format(celebrations["Sunfest"], "*(%Y %B %d - %A)*")`
 
 Crackers and fireworks at sunset. Popcorns made in fires in the night. (See [Kupala Night](https://en.wikipedia.org/wiki/Kupala_Night)).
 
 ### Harvestday
 
-- **Between Lightfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`
+- **Between Sunfest and Fallfest** `r format(celebrations["Harvestday"], "*(%Y %B %d - %A)*")`
 
 We harvest the fruits of our work and relax. Work superiors treat to dinner. Rewards and vacations. Start of summer break. (See [Lughnasadh](https://en.wikipedia.org/wiki/Lughnasadh)).  
 
