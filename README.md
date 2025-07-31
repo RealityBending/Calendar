@@ -4,7 +4,7 @@
 We are in **Summer**. The **Bright Days** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Harvestday**](https://github.com/RealityBending/Calendar#Harvestday)
-in **9** days.
+in **8** days.
 
 ## Celebrations
 
