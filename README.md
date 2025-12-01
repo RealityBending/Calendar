@@ -1,14 +1,14 @@
+# Reality Bending Lab’s Calendar
 
-# Calendar
 
-We are in **Summer**. The **Bright Days** are upon us, and we are in the
+We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
-[**Fallfest**](https://github.com/RealityBending/Calendar#Fallfest) in
-**15** days.
+[**Blacksun**](https://github.com/RealityBending/Calendar#Blacksun) in
+**4** days.
 
 ## Celebrations
 
-![](calendar_plot-1.png)<!-- -->
+![](README_files/figure-commonmark/calendar_plot-1.png)
 
 In the Reality Bending Lab, we follow an astronomical calendar. The year
 is divided in two main overlapping cycles, the **Rise/Fall** phases

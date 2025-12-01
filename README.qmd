@@ -1,40 +1,28 @@
 ---
-output: 
-  github_document:
-    toc: false
-    fig_width: 10.08
-    fig_height: 6
-tags: [r, reports]
-vignette: >
-  \usepackage[utf8]{inputenc}
-  %\VignetteEngine{knitr::rmarkdown}
-editor_options: 
-  chunk_output_type: console
+title: "Reality Bending Lab's Calendar"
+format: gfm
 ---
 
-# Calendar
 
-```{r, echo = FALSE, message=FALSE, warning=FALSE}
-knitr::opts_chunk$set(
-  dpi = 600,
-  collapse = TRUE,
-  fig.path = ""
-)
-options(knitr.kable.NA = '',
-        digits = 4,
-        width=60)
-
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
 
 # Dependencies
 library(chillR)
 library(lunar)
 ```
 
-```{r astromical_events, echo = FALSE}
+```{r astromical_events}
+#| echo: false
+
 source("https://raw.githubusercontent.com/RealityBending/scripts/main/astronomical_dates.R")
 ```
 
-```{r dates_celebrations, echo = FALSE}
+```{r dates_celebrations}
+#| echo: false
+
 get_dates_celebrations <- function(year=2024){
   
   # Convenience function to find the midpoint between two dates
@@ -78,7 +66,9 @@ get_dates_celebrations <- function(year=2024){
 }
 ```
 
-```{r find_closest, echo = FALSE}
+```{r find_closest}
+#| echo: false
+
 get_dates <- function(){
   today <- Sys.Date()
   year <- as.numeric(format(today, "%Y"))
@@ -98,7 +88,7 @@ get_dates <- function(){
     season <- "Summer"
     period <- "Bright Days"
     phase <- "Fall"
-  } else if (celeb %in% c("Rootday", "Deadsnight", "Nightfest")){
+  } else if (celeb %in% c("Rootday", "Deadsnight", "Blacksun", "Nightfest")){
     season <- "Autumn"
     period <- "Dark Nights"
     phase <- "Fall"
@@ -126,7 +116,12 @@ get_dates <- function(){
 ```
 
 
-```{r print, echo = FALSE, results='asis', message=FALSE, warning=FALSE}
+```{r print}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
 info <- get_dates()
 
 cat(paste0("We are in **",
@@ -151,7 +146,14 @@ cat(paste0("We are in **",
 ## Celebrations
 
 
-```{r calendar_plot, echo=FALSE, message=FALSE, warning=FALSE, dpi=450}
+```{r calendar_plot}
+#| echo: false
+#| message: false
+#| warning: false
+#| dpi: 450
+#| fig-width: 10.08
+#| fig-height: 6
+
 library(ggplot2)
 
 year <- as.numeric(format(Sys.Date(), "%Y"))
@@ -217,8 +219,8 @@ ggplot(data, aes(x = Day, y=Bar)) +
         panel.grid.major =  element_line(colour = "#FFB300")) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 1), breaks = NULL) +
   guides(fill="none") +
-  scale_x_date(date_breaks = "1 month", 
-               date_labels = month.abb, 
+  scale_x_date(date_breaks = "1 month",
+               date_labels = "%b",
                limits = range(c(days[1], days[-1]))) +
   scale_fill_manual(values=c("Lunar"="#2196F3", "Solar"= "#f44336", "Other"="purple"))
 ```
