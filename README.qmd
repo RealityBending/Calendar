@@ -10,14 +10,106 @@ format: gfm
 #| warning: false
 
 # Dependencies
-library(chillR)
 library(lunar)
 ```
 
 ```{r astromical_events}
 #| echo: false
 
-source("https://raw.githubusercontent.com/RealityBending/scripts/main/astronomical_dates.R")
+
+daylength<-function(latitude,JDay,notimes.as.na=FALSE)
+  # https://github.com/cran/chillR/
+{
+  if(missing(latitude)) stop("'latitude' not specified")
+  if(missing(JDay)) stop("'JDay' not specified")
+  if (!isTRUE(all(is.numeric(JDay)))) stop("'JDay' contains non-numeric values")
+  if(length(latitude)>1) stop("'latitude' has more than one element")
+  if (!is.numeric(latitude)) stop("'latitude' is not numeric")
+  if(latitude>90|latitude<(-90)) warning("'latitude' is usually between -90 and 90")
+
+  Gamma<-2*pi/365*((JDay)-1)
+  Delta<-180/pi*(0.006918-0.399912*cos(Gamma)+0.070257*sin(Gamma)-0.006758*cos(2*Gamma)+
+                   0.000907*sin(2*(Gamma))-0.002697*cos(3*(Gamma))+0.00148*sin(3*(Gamma)))
+  CosWo<-(sin(-0.8333/360*2*pi)-sin(latitude/360*2*pi)*
+            sin(Delta/360*2*pi))/(cos(latitude/360*2*pi)*cos(Delta/360*2*pi))
+  
+  normal_days<-which(CosWo>=-1&CosWo<=1)
+  Sunrise<-rep(-99,length(CosWo))
+  Sunrise[normal_days]<-12-acos(CosWo[normal_days])/(15/360*2*pi)
+  Sunset<-rep(-99,length(CosWo))
+  Sunset[normal_days]<-12+acos(CosWo[normal_days])/(15/360*2*pi)
+  Daylength<-Sunset-Sunrise
+  Daylength[which(CosWo>1)]<-0
+  Daylength[which(CosWo<(-1))]<-24
+  Sunrise[which(Daylength==24)]<-99
+  Sunset[which(Daylength==24)]<-99
+  
+  if(notimes.as.na)
+   {Sunrise[which(Sunrise %in% c(-99,99))]<-NA
+    Sunset[which(Sunset %in% c(-99,99))]<-NA}
+  Sunset[which(is.na(JDay))]<-NA
+  Sunrise[which(is.na(JDay))]<-NA
+  Daylength[which(is.na(JDay))]<-NA
+ 
+ return(list(Sunrise=Sunrise,Sunset=Sunset,Daylength=Daylength))  
+}
+
+
+
+
+# This function computes the dates of astronomical events (equinoxes, solstices,
+# and full moons) for a given year in a given latitude.
+#
+# Installation:
+# It can loaded using `source("https://raw.githubusercontent.com/RealityBending/scripts/main/astronomical_dates.R")`
+# It requires the 'chillR' and the 'lunar' packages to be installed.
+#
+# Author: Dominique Makowski
+#
+# Usage:
+# > events <- astronomical_dates(year=2023, latitude = 50.8229)  # Latitude in Brighton, UK
+# > events["Equinox_Spring"]
+astronomical_dates <- function(year=2025, latitude = 50.8229){
+  dates <- seq(ISOdate(year, 1, 1), ISOdate(year, 12, 31), by='day')
+  # Julian days
+  days <- strptime(paste(format(dates, "%m"), "/", format(dates, "%d"), "/", format(dates, "%Y"), sep = ""), "%m/%d/%Y")$yday + 1
+  daylength <- daylength(latitude = latitude, days)$Daylength
+
+  # Solstice ---------------------------------------------------------------
+  solstice_winter <- as.Date(dates[which(daylength==min(daylength))])
+  solstice_summer <- as.Date(dates[which(daylength==max(daylength))])
+
+  # Equinox ---------------------------------------------------------------
+  # Method 1: Where the daylength is closest to 12 hours
+  equinox_spring <- as.Date(dates[which(abs(daylength[1:150] - 12) == min(abs(daylength[1:150] - 12)))])
+  equinox_autumn <- as.Date(dates[which(abs(daylength[151:300] - 12) == min(abs(daylength[151:300] - 12)))+150])
+
+  # Method 2: Where the rate of changes is minimum
+  # equinox_spring <- as.Date(dates[which(diff(daylength)==max(diff(daylength)))+1])
+  # equinox_autumn <- as.Date(dates[which(diff(daylength)==min(diff(daylength)))+1])
+
+  # Method 3: Where there is an inversion in the rate of change
+  # d <- diff(diff(daylength))
+  # equinox_spring <- as.Date(dates[which(d > 0 & c(d[-1], 0) < 0)+2])
+  # equinox_autumn <- as.Date(dates[which(d < 0 & c(d[-1], 0) > 0)+2])
+
+  # Full moons
+  phase <- lunar::lunar.illumination(dates)
+  moon <- data.frame(dates = as.Date(dates),
+                     phase = phase,
+                     newmoon = FALSE,
+                     fullmoon = FALSE)
+  moon[which(diff(sign(diff(phase)))==-2)+1, "fullmoon"] <- TRUE
+  moon[which(diff(sign(diff(phase)))==2)+2, "newmoon"] <- TRUE
+
+  list("Solstice_Summer"=solstice_summer,
+       "Solstice_Winter"=solstice_winter,
+       "Equinox_Autumn"=equinox_autumn,
+       "Equinox_Spring"=equinox_spring,
+       "Moon_Full"=moon[moon$fullmoon==TRUE, "dates"],
+       "Moon_New"=moon[moon$newmoon==TRUE, "dates"],
+       "Dates"=dates)
+}
 ```
 
 ```{r dates_celebrations}
@@ -68,6 +160,7 @@ get_dates_celebrations <- function(year=2024){
 
 ```{r find_closest}
 #| echo: false
+
 
 get_dates <- function(){
   today <- Sys.Date()

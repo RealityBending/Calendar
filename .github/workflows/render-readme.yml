@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         # chillR, lunar, and ggplot2 are required by your script
         run: |
-          install.packages(c("rmarkdown", "chillR", "lunar", "ggplot2"))
+          install.packages(c("rmarkdown", "lunar", "ggplot2"))
         shell: Rscript {0}
 
       - name: Render README
