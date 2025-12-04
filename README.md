@@ -4,7 +4,7 @@
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Blacksun**](https://github.com/RealityBending/Calendar#Blacksun) in
-**2** days.
+**1** days.
 
 ## Celebrations
 
