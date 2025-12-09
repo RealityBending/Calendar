@@ -4,7 +4,7 @@
 We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
 time of the **Fall**. The next celebration is
 [**Nightfest**](https://github.com/RealityBending/Calendar#Nightfest) in
-**14** days (@DominiqueMakowski).
+**13** days.
 
 ## Celebrations
 
