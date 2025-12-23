@@ -1,10 +1,10 @@
 # Reality Bending Lab’s Calendar
 
 
-We are in **Autumn**. The **Dark Nights** are upon us, and we are in the
-time of the **Fall**. The next celebration is
-[**Nightfest**](https://github.com/RealityBending/Calendar#Nightfest) in
-**0** days.
+We are in **Winter**. The **Dark Nights** are upon us, and we are in the
+time of the **Rise**. The next celebration is
+[**Winenight**](https://github.com/RealityBending/Calendar#Winenight) in
+**41** days.
 
 ## Celebrations
 
