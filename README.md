@@ -4,7 +4,7 @@
 We are in **Winter**. The **Dark Nights** are upon us, and we are in the
 time of the **Rise**. The next celebration is
 [**Winenight**](https://github.com/RealityBending/Calendar#Winenight) in
-**12** days.
+**11** days.
 
 ## Celebrations
 
