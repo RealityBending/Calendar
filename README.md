@@ -1,10 +1,10 @@
 # Reality Bending Lab’s Calendar
 
 
-We are in **Winter**. The **Dark Nights** are upon us, and we are in the
-time of the **Rise**. The next celebration is
-[**Preparationday**](https://github.com/RealityBending/Calendar#Preparationday)
-in **0** days.
+We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
+time of the **FAILURE**. The next celebration is
+[**Innocentnight**](https://github.com/RealityBending/Calendar#Innocentnight)
+in **27** days.
 
 ## Celebrations
 
