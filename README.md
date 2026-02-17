@@ -4,7 +4,7 @@
 We are in **FAILURE**. The **FAILURE** are upon us, and we are in the
 time of the **FAILURE**. The next celebration is
 [**Innocentnight**](https://github.com/RealityBending/Calendar#Innocentnight)
-in **15** days.
+in **14** days (@DominiqueMakowski).
 
 ## Celebrations
 
